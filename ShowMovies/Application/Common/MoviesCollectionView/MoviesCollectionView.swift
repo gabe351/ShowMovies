@@ -47,13 +47,6 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         contract?.goToDetail(id: movies[indexPath.row].id)
     }
     
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 375,
-//                      height: 104)
-//    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         contract?.request(nextPage: 1)
     }

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Movie View Controller-->
+        <!--Search Movies-->
         <scene sceneID="5n6-Ms-W05">
             <objects>
                 <viewController id="4ow-Zf-JZx" customClass="SearchMovieViewController" customModule="ShowMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="faa-9z-T1Y" customClass="MoviesCollectionView" customModule="ShowMovies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l1K-g1-KeD">
                                     <size key="itemSize" width="375" height="104"/>
@@ -31,12 +31,12 @@
                                 <cells/>
                             </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="zft-wq-Hrw">
-                                <rect key="frame" x="0.0" y="25" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="56"/>
                                 <viewLayoutGuide key="safeArea" id="bS0-0m-s0e"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzM-ke-WQ2">
-                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <rect key="frame" x="37" y="228" width="300" height="256"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QkW-nz-Ry3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="TOd-RK-QEh"/>
+                    <navigationItem key="navigationItem" title="Search Movies" id="X8s-OW-bm6"/>
                     <connections>
                         <outlet property="emptyLabel" destination="FzM-ke-WQ2" id="oFl-9f-7Ue"/>
                         <outlet property="moviesCollectionView" destination="faa-9z-T1Y" id="QUO-SS-vyT"/>
@@ -77,28 +77,21 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="301.79910044977515"/>
+            <point key="canvasLocation" x="1660" y="301.79910044977515"/>
         </scene>
-        <!--View Controller-->
+        <!--New Releases-->
         <scene sceneID="9mC-qA-8BO">
             <objects>
-                <viewController id="xxP-74-22Y" sceneMemberID="viewController">
+                <viewController id="xxP-74-22Y" customClass="ReleasesViewController" customModule="ShowMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zgy-R5-Cb7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New releases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbD-qW-VRk">
-                                <rect key="frame" x="16" y="25" width="343" height="23"/>
-                                <viewLayoutGuide key="safeArea" id="XQw-YA-zLa"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-3B-fZM">
-                                <rect key="frame" x="0.0" y="56" width="375" height="562"/>
-                                <color key="backgroundColor" red="0.40980000770000002" green="1" blue="0.2769263568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-3B-fZM" customClass="MoviesCollectionView" customModule="ShowMovies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CYA-cX-hm1">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="375" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -108,21 +101,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="leading" secondItem="LLJ-bE-zUk" secondAttribute="leading" id="A1o-sP-i5e"/>
-                            <constraint firstItem="LLJ-bE-zUk" firstAttribute="trailing" secondItem="jbD-qW-VRk" secondAttribute="trailing" constant="16" id="B8r-aO-E6Z"/>
-                            <constraint firstItem="LLJ-bE-zUk" firstAttribute="bottom" secondItem="ISV-3B-fZM" secondAttribute="bottom" id="GUO-jj-LA8"/>
-                            <constraint firstItem="jbD-qW-VRk" firstAttribute="leading" secondItem="LLJ-bE-zUk" secondAttribute="leading" constant="16" id="OEH-t7-nOg"/>
-                            <constraint firstItem="jbD-qW-VRk" firstAttribute="top" secondItem="LLJ-bE-zUk" secondAttribute="top" constant="5" id="o61-0W-BtC"/>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="top" secondItem="jbD-qW-VRk" secondAttribute="bottom" constant="8" id="qer-3b-oSL"/>
-                            <constraint firstItem="LLJ-bE-zUk" firstAttribute="trailing" secondItem="ISV-3B-fZM" secondAttribute="trailing" id="vtF-ap-igr"/>
+                            <constraint firstItem="ISV-3B-fZM" firstAttribute="bottom" secondItem="LLJ-bE-zUk" secondAttribute="bottom" id="AfW-du-dbk"/>
+                            <constraint firstItem="ISV-3B-fZM" firstAttribute="top" secondItem="LLJ-bE-zUk" secondAttribute="top" id="Grq-fv-kE7"/>
+                            <constraint firstItem="ISV-3B-fZM" firstAttribute="trailing" secondItem="LLJ-bE-zUk" secondAttribute="trailing" id="qk4-XG-Bcu"/>
+                            <constraint firstItem="ISV-3B-fZM" firstAttribute="leading" secondItem="LLJ-bE-zUk" secondAttribute="leading" id="wkM-65-Kfk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LLJ-bE-zUk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="gNe-gh-j8z"/>
+                    <navigationItem key="navigationItem" title="New Releases" id="hA1-hE-ZlH"/>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="ISV-3B-fZM" id="RNc-kk-kVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c24-tp-Fqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-363"/>
+            <point key="canvasLocation" x="1660" y="-363.86806596701655"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Huj-G3-JCk">
@@ -134,13 +127,51 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xxP-74-22Y" kind="relationship" relationship="viewControllers" id="BqK-z5-kOI"/>
-                        <segue destination="4ow-Zf-JZx" kind="relationship" relationship="viewControllers" id="wwK-TQ-Bzh"/>
+                        <segue destination="Srf-77-cNd" kind="relationship" relationship="viewControllers" id="BqK-z5-kOI"/>
+                        <segue destination="ucu-76-RhU" kind="relationship" relationship="viewControllers" id="wwK-TQ-Bzh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXr-Ts-t4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-230" y="-31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Bo-tA-jSr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ucu-76-RhU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="TOd-RK-QEh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZuR-Q0-rct">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4ow-Zf-JZx" kind="relationship" relationship="rootViewController" id="KYU-U6-2Nz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qv6-NC-8nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="301.79910044977515"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="27g-n2-sJ7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Srf-77-cNd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="gNe-gh-j8z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cZ0-wp-Vek">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xxP-74-22Y" kind="relationship" relationship="rootViewController" id="z2s-re-bVF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lNP-A1-aW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="-363.86806596701655"/>
         </scene>
     </scenes>
 </document>
