@@ -40,6 +40,7 @@
 		049CCAB92128BCFB00BB4C39 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCAB82128BCFB00BB4C39 /* LoaderViewController.swift */; };
 		049CCABC2128BD3A00BB4C39 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049CCABB2128BD3A00BB4C39 /* MovieDetailViewController.xib */; };
 		049CCABE2128BDF700BB4C39 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCABD2128BDF700BB4C39 /* ViewUtils.swift */; };
+		049CCAC02128C3EF00BB4C39 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCABF2128C3EF00BB4C39 /* MoviesTableView.swift */; };
 		04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A00521283C2A00D7CA77 /* AppDelegate.swift */; };
 		04B8A00821283C2A00D7CA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A00721283C2A00D7CA77 /* ViewController.swift */; };
 		04B8A00B21283C2A00D7CA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8A00921283C2A00D7CA77 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		049CCAB82128BCFB00BB4C39 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		049CCABB2128BD3A00BB4C39 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		049CCABD2128BDF700BB4C39 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		049CCABF2128C3EF00BB4C39 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
 		04B8A00221283C2A00D7CA77 /* ShowMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B8A00521283C2A00D7CA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B8A00721283C2A00D7CA77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				049CCA9A21284FD800BB4C39 /* Cell */,
 				049CCA9421284FBC00BB4C39 /* MoviesCollectionView.swift */,
+				049CCABF2128C3EF00BB4C39 /* MoviesTableView.swift */,
 				049CCA9621284FC800BB4C39 /* MoviesCollectionViewContract.swift */,
 			);
 			path = MoviesCollectionView;
@@ -623,6 +626,7 @@
 				04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */,
 				049CCAB32128BBB400BB4C39 /* GetMovies.swift in Sources */,
 				049CCA9921284FCE00BB4C39 /* MovieCell.swift in Sources */,
+				049CCAC02128C3EF00BB4C39 /* MoviesTableView.swift in Sources */,
 				049CCAB72128BC2E00BB4C39 /* MovieDetailViewController.swift in Sources */,
 				049CCA6C2128401500BB4C39 /* UIImageViewExtension.swift in Sources */,
 				049CCAA721285A6B00BB4C39 /* ReleasesViewController.swift in Sources */,

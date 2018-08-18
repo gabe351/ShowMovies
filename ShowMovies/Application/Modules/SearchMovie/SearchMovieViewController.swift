@@ -11,7 +11,7 @@ import UIKit
 class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var moviesCollectionView: MoviesCollectionView!
+    @IBOutlet weak var moviesTableView: MoviesTableView!
     @IBOutlet weak var emptyLabel: UILabel!
     
     override func viewDidLoad() {
@@ -21,8 +21,8 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        moviesCollectionView.contract = self
-        moviesCollectionView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
+        moviesTableView.contract = self
+        moviesTableView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
     }
     
     func mockMovie() -> Movie {
@@ -58,13 +58,13 @@ extension SearchMovieViewController: SearchMovieViewContract {
     }
 }
 
-extension SearchMovieViewController: MoviesCollectionViewContract {
+extension SearchMovieViewController: MoviesTableViewContract {
     
     func request(nextPage: Int) {
         
     }
     
-    func goToDetail(id: Int) {                
+    func goToDetail(id: Int) {
         let movieDetail: MovieDetailViewController = loadNibNamed(MovieDetailViewController.NIB_NAME, owner: self)!
         movieDetail.movieId = 1
         self.navigationController?.pushViewController(movieDetail, animated: true)

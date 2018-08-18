@@ -10,13 +10,14 @@ import UIKit
 
 class ReleasesViewController: UIViewController {
     
-    @IBOutlet weak var moviesCollectionView: MoviesCollectionView!
+    @IBOutlet weak var moviesTableView: MoviesTableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moviesCollectionView.contract = self
-        moviesCollectionView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
+        moviesTableView.contract = self
+        moviesTableView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
     }
     
     func mockMovie() -> Movie {
@@ -53,7 +54,7 @@ extension ReleasesViewController: ReleasesViewContract {
     }
 }
 
-extension ReleasesViewController: MoviesCollectionViewContract {
+extension ReleasesViewController: MoviesTableViewContract {
     
     func request(nextPage: Int) {
         

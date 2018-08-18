@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieCell: UICollectionViewCell {
+class MovieCell: UITableViewCell {
     
     public static let NIB_NAME   = "MovieCell"
     public static let IDENTIFIER = "movieCellIdentifier"

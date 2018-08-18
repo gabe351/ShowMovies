@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="faa-9z-T1Y" customClass="MoviesCollectionView" customModule="ShowMovies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="145" width="375" height="473"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l1K-g1-KeD">
-                                    <size key="itemSize" width="375" height="104"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="zft-wq-Hrw">
                                 <rect key="frame" x="0.0" y="69" width="375" height="56"/>
                                 <viewLayoutGuide key="safeArea" id="bS0-0m-s0e"/>
@@ -37,32 +25,37 @@
                             </searchBar>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty List" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzM-ke-WQ2">
                                 <rect key="frame" x="37" y="228" width="300" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="Klh-S8-1xF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="80m-FG-hdw" customClass="MoviesTableView" customModule="ShowMovies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="125" width="375" height="493"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zft-wq-Hrw" firstAttribute="trailing" secondItem="QkW-nz-Ry3" secondAttribute="trailing" id="3xc-q7-gFI"/>
-                            <constraint firstItem="faa-9z-T1Y" firstAttribute="trailing" secondItem="QkW-nz-Ry3" secondAttribute="trailing" id="4vi-1e-Aph"/>
-                            <constraint firstItem="faa-9z-T1Y" firstAttribute="leading" secondItem="QkW-nz-Ry3" secondAttribute="leading" id="DF7-4p-wz7"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="FzM-ke-WQ2" secondAttribute="bottom" constant="134.16999999999999" id="JGV-Ul-Afk"/>
-                            <constraint firstItem="zft-wq-Hrw" firstAttribute="leading" secondItem="QkW-nz-Ry3" secondAttribute="leading" id="Mf9-kX-G2h"/>
-                            <constraint firstItem="FzM-ke-WQ2" firstAttribute="leading" secondItem="giW-Da-VHR" secondAttribute="leadingMargin" constant="21.039999999999999" id="N24-dq-ejE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FzM-ke-WQ2" secondAttribute="trailing" constant="21.960000000000001" id="Oca-iq-mvR"/>
-                            <constraint firstItem="FzM-ke-WQ2" firstAttribute="top" secondItem="giW-Da-VHR" secondAttribute="topMargin" constant="163.83000000000001" id="WcP-yk-IDM"/>
-                            <constraint firstItem="zft-wq-Hrw" firstAttribute="top" secondItem="QkW-nz-Ry3" secondAttribute="top" constant="5" id="b0s-dd-nyg"/>
-                            <constraint firstItem="faa-9z-T1Y" firstAttribute="top" secondItem="zft-wq-Hrw" secondAttribute="bottom" constant="20" id="k6Q-Ek-AK2"/>
-                            <constraint firstItem="faa-9z-T1Y" firstAttribute="bottom" secondItem="QkW-nz-Ry3" secondAttribute="bottom" id="sAL-nd-mgx"/>
-                            <constraint firstItem="faa-9z-T1Y" firstAttribute="top" secondItem="zft-wq-Hrw" secondAttribute="bottom" constant="20" id="xgJ-bl-IMD"/>
+                            <constraint firstItem="80m-FG-hdw" firstAttribute="leading" secondItem="zft-wq-Hrw" secondAttribute="leading" id="0JT-qo-f0f"/>
+                            <constraint firstItem="80m-FG-hdw" firstAttribute="top" secondItem="zft-wq-Hrw" secondAttribute="bottom" id="2Ey-kY-XLf"/>
+                            <constraint firstItem="80m-FG-hdw" firstAttribute="centerX" secondItem="FzM-ke-WQ2" secondAttribute="centerX" id="Bsf-aV-i01"/>
+                            <constraint firstItem="80m-FG-hdw" firstAttribute="trailing" secondItem="zft-wq-Hrw" secondAttribute="trailing" id="CfF-Mw-9Fx"/>
+                            <constraint firstItem="80m-FG-hdw" firstAttribute="bottom" secondItem="QkW-nz-Ry3" secondAttribute="bottom" id="HmW-W5-Ogb"/>
+                            <constraint firstItem="zft-wq-Hrw" firstAttribute="leading" secondItem="QkW-nz-Ry3" secondAttribute="leading" id="JZc-Bx-4Nx"/>
+                            <constraint firstItem="QkW-nz-Ry3" firstAttribute="bottom" secondItem="FzM-ke-WQ2" secondAttribute="bottom" constant="134" id="O7v-r9-mSN"/>
+                            <constraint firstItem="FzM-ke-WQ2" firstAttribute="leading" secondItem="QkW-nz-Ry3" secondAttribute="leading" constant="37" id="TAq-1p-PSB"/>
+                            <constraint firstItem="zft-wq-Hrw" firstAttribute="trailing" secondItem="QkW-nz-Ry3" secondAttribute="trailing" id="aan-w3-Hf2"/>
+                            <constraint firstItem="zft-wq-Hrw" firstAttribute="top" secondItem="QkW-nz-Ry3" secondAttribute="top" constant="5" id="ogW-5U-7kK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QkW-nz-Ry3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search Movies" id="X8s-OW-bm6"/>
                     <connections>
                         <outlet property="emptyLabel" destination="FzM-ke-WQ2" id="oFl-9f-7Ue"/>
-                        <outlet property="moviesCollectionView" destination="faa-9z-T1Y" id="QUO-SS-vyT"/>
+                        <outlet property="moviesTableView" destination="80m-FG-hdw" id="mbD-4p-dFn"/>
                         <outlet property="searchBar" destination="zft-wq-Hrw" id="mtn-xk-Uzz"/>
                         <outlet property="searchDisplayController" destination="v9Q-OF-v46" id="qQV-cj-0LM"/>
                     </connections>
@@ -87,30 +80,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-3B-fZM" customClass="MoviesCollectionView" customModule="ShowMovies" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-Qv-gNj" customClass="MoviesTableView" customModule="ShowMovies" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CYA-cX-hm1">
-                                    <size key="itemSize" width="375" height="104"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="bottom" secondItem="LLJ-bE-zUk" secondAttribute="bottom" id="AfW-du-dbk"/>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="top" secondItem="LLJ-bE-zUk" secondAttribute="top" id="Grq-fv-kE7"/>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="trailing" secondItem="LLJ-bE-zUk" secondAttribute="trailing" id="qk4-XG-Bcu"/>
-                            <constraint firstItem="ISV-3B-fZM" firstAttribute="leading" secondItem="LLJ-bE-zUk" secondAttribute="leading" id="wkM-65-Kfk"/>
+                            <constraint firstItem="Vbg-Qv-gNj" firstAttribute="leading" secondItem="Zgy-R5-Cb7" secondAttribute="leading" id="YC5-SW-0p7"/>
+                            <constraint firstItem="Vbg-Qv-gNj" firstAttribute="bottom" secondItem="LLJ-bE-zUk" secondAttribute="bottom" id="iwP-lC-6ro"/>
+                            <constraint firstItem="LLJ-bE-zUk" firstAttribute="trailing" secondItem="Vbg-Qv-gNj" secondAttribute="trailing" id="pmn-hA-pKc"/>
+                            <constraint firstItem="Vbg-Qv-gNj" firstAttribute="top" secondItem="LLJ-bE-zUk" secondAttribute="top" id="tsC-33-edM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LLJ-bE-zUk"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Releases" id="hA1-hE-ZlH"/>
                     <connections>
-                        <outlet property="moviesCollectionView" destination="ISV-3B-fZM" id="RNc-kk-kVf"/>
+                        <outlet property="moviesTableView" destination="Vbg-Qv-gNj" id="rGp-uC-agJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c24-tp-Fqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
