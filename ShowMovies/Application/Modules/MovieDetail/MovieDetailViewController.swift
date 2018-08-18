@@ -31,6 +31,12 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
 //        presenter.loadMovieDetail(id: movieId)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
     func show(detail: MovieDetail) {
 //        movieImageView.setImageFrom(url: RemoteUtils.buildImageUrl(path: detail.posterPath), placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
 //        movieTitle.text               = detail.title
