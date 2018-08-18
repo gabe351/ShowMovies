@@ -49,7 +49,7 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         contract?.goToDetail(id: movies[indexPath.row].id)
     }
-    
+            
     private func initialConfiguration() {
         self.separatorStyle = .none
     }

@@ -25,6 +25,14 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         moviesTableView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text else {
+            return
+        }
+        
+//        presenter.findMovie(page: 1, query: query)
+    }
+    
     func mockMovie() -> Movie {
         
         return Movie(id: 1,

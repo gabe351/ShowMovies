@@ -8,11 +8,6 @@
 
 import Foundation
 
-//protocol MoviesCollectionViewContract: class {
-//    func request(nextPage: Int)
-//    func goToDetail(id: Int)
-//}
-
 protocol MoviesTableViewContract: class {
     func request(nextPage: Int)
     func goToDetail(id: Int)
