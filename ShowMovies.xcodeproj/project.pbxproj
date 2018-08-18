@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		049CCA6C2128401500BB4C39 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA6B2128401500BB4C39 /* UIImageViewExtension.swift */; };
 		049CCA6F2128404900BB4C39 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA6E2128404900BB4C39 /* StringExtension.swift */; };
+		049CCA71212841B000BB4C39 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */; };
+		049CCA73212841C900BB4C39 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA72212841C900BB4C39 /* UIColorExtension.swift */; };
+		049CCA752128421300BB4C39 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA742128421300BB4C39 /* UIViewControllerExtension.swift */; };
+		049CCA782128425D00BB4C39 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA772128425D00BB4C39 /* CallbackEnum.swift */; };
+		049CCA7A2128428100BB4C39 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA792128428100BB4C39 /* BaseCallback.swift */; };
+		049CCA7C212842C100BB4C39 /* RemoteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA7B212842C100BB4C39 /* RemoteUtils.swift */; };
+		049CCA7E2128430600BB4C39 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA7D2128430600BB4C39 /* DefaultValues.swift */; };
+		049CCA822128435500BB4C39 /* DefaultStringIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA812128435500BB4C39 /* DefaultStringIfNilActionTest.swift */; };
+		049CCA852128446B00BB4C39 /* BuildURLWithPathActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA842128446B00BB4C39 /* BuildURLWithPathActionTest.swift */; };
+		049CCA872128449900BB4C39 /* DefaultBoolIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA862128449900BB4C39 /* DefaultBoolIfNilActionTest.swift */; };
+		049CCA89212844B300BB4C39 /* DefaultDateIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA88212844B300BB4C39 /* DefaultDateIfNilActionTest.swift */; };
+		049CCA8B212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA8A212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift */; };
+		049CCA8D212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA8C212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift */; };
 		04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A00521283C2A00D7CA77 /* AppDelegate.swift */; };
 		04B8A00821283C2A00D7CA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A00721283C2A00D7CA77 /* ViewController.swift */; };
 		04B8A00B21283C2A00D7CA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8A00921283C2A00D7CA77 /* Main.storyboard */; };
@@ -32,6 +45,19 @@
 /* Begin PBXFileReference section */
 		049CCA6B2128401500BB4C39 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		049CCA6E2128404900BB4C39 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		049CCA72212841C900BB4C39 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		049CCA742128421300BB4C39 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		049CCA772128425D00BB4C39 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
+		049CCA792128428100BB4C39 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
+		049CCA7B212842C100BB4C39 /* RemoteUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUtils.swift; sourceTree = "<group>"; };
+		049CCA7D2128430600BB4C39 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
+		049CCA812128435500BB4C39 /* DefaultStringIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStringIfNilActionTest.swift; sourceTree = "<group>"; };
+		049CCA842128446B00BB4C39 /* BuildURLWithPathActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildURLWithPathActionTest.swift; sourceTree = "<group>"; };
+		049CCA862128449900BB4C39 /* DefaultBoolIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoolIfNilActionTest.swift; sourceTree = "<group>"; };
+		049CCA88212844B300BB4C39 /* DefaultDateIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateIfNilActionTest.swift; sourceTree = "<group>"; };
+		049CCA8A212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFloatIfNilActionTest.swift; sourceTree = "<group>"; };
+		049CCA8C212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntIfNilActionTest.swift; sourceTree = "<group>"; };
 		04B8A00221283C2A00D7CA77 /* ShowMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B8A00521283C2A00D7CA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B8A00721283C2A00D7CA77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				049CCA6621283FAA00BB4C39 /* Extensions */,
+				049CCA762128424B00BB4C39 /* Enums */,
+				049CCA792128428100BB4C39 /* BaseCallback.swift */,
+				049CCA7B212842C100BB4C39 /* RemoteUtils.swift */,
+				049CCA7D2128430600BB4C39 /* DefaultValues.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -123,6 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				049CCA6B2128401500BB4C39 /* UIImageViewExtension.swift */,
+				049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */,
+				049CCA72212841C900BB4C39 /* UIColorExtension.swift */,
+				049CCA742128421300BB4C39 /* UIViewControllerExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -133,6 +166,43 @@
 				049CCA6E2128404900BB4C39 /* StringExtension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		049CCA762128424B00BB4C39 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				049CCA772128425D00BB4C39 /* CallbackEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		049CCA7F2128433000BB4C39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				049CCA832128444400BB4C39 /* RemoteUtils */,
+				049CCA802128434000BB4C39 /* DefaultValues */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		049CCA802128434000BB4C39 /* DefaultValues */ = {
+			isa = PBXGroup;
+			children = (
+				049CCA812128435500BB4C39 /* DefaultStringIfNilActionTest.swift */,
+				049CCA862128449900BB4C39 /* DefaultBoolIfNilActionTest.swift */,
+				049CCA88212844B300BB4C39 /* DefaultDateIfNilActionTest.swift */,
+				049CCA8A212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift */,
+				049CCA8C212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift */,
+			);
+			path = DefaultValues;
+			sourceTree = "<group>";
+		};
+		049CCA832128444400BB4C39 /* RemoteUtils */ = {
+			isa = PBXGroup;
+			children = (
+				049CCA842128446B00BB4C39 /* BuildURLWithPathActionTest.swift */,
+			);
+			path = RemoteUtils;
 			sourceTree = "<group>";
 		};
 		04B89FF921283C2A00D7CA77 = {
@@ -172,6 +242,7 @@
 		04B8A01921283C2C00D7CA77 /* ShowMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				049CCA7F2128433000BB4C39 /* Utils */,
 				04B8A01A21283C2C00D7CA77 /* ShowMoviesTests.swift */,
 				04B8A01C21283C2C00D7CA77 /* Info.plist */,
 			);
@@ -398,10 +469,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049CCA71212841B000BB4C39 /* UIActivityIndicatorView.swift in Sources */,
 				049CCA6F2128404900BB4C39 /* StringExtension.swift in Sources */,
+				049CCA7A2128428100BB4C39 /* BaseCallback.swift in Sources */,
+				049CCA7C212842C100BB4C39 /* RemoteUtils.swift in Sources */,
 				04B8A00821283C2A00D7CA77 /* ViewController.swift in Sources */,
 				04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */,
 				049CCA6C2128401500BB4C39 /* UIImageViewExtension.swift in Sources */,
+				049CCA752128421300BB4C39 /* UIViewControllerExtension.swift in Sources */,
+				049CCA73212841C900BB4C39 /* UIColorExtension.swift in Sources */,
+				049CCA7E2128430600BB4C39 /* DefaultValues.swift in Sources */,
+				049CCA782128425D00BB4C39 /* CallbackEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049CCA872128449900BB4C39 /* DefaultBoolIfNilActionTest.swift in Sources */,
+				049CCA8B212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift in Sources */,
 				04B8A01B21283C2C00D7CA77 /* ShowMoviesTests.swift in Sources */,
+				049CCA822128435500BB4C39 /* DefaultStringIfNilActionTest.swift in Sources */,
+				049CCA852128446B00BB4C39 /* BuildURLWithPathActionTest.swift in Sources */,
+				049CCA89212844B300BB4C39 /* DefaultDateIfNilActionTest.swift in Sources */,
+				049CCA8D212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
