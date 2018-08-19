@@ -14,6 +14,13 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var moviesTableView: MoviesTableView!
     @IBOutlet weak var emptyLabel: UILabel!
     
+    let loader: LoadingViewController = LoadingViewController()
+    
+    lazy var presenter: SearchMoviePresenterContract = {
+        return SearchMoviePresenter(view: self,
+                                    getMovie: provideGetMovies())
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()                        
     }
@@ -22,7 +29,6 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         super.viewWillAppear(animated)
         
         moviesTableView.contract = self
-        moviesTableView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -30,23 +36,13 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
             return
         }
         
-//        presenter.findMovie(page: 1, query: query)
-    }
-    
-    func mockMovie() -> Movie {
-        
-        return Movie(id: 1,
-                     title: "asfasfa",
-                     originalTitle: "asfasfasf",
-                     voteAverage: 23,
-                     posterPath: "https://img00.deviantart.net/a909/i/2006/138/3/a/protecting_the_loved_one_by_maiss_thro.jpg",
-                     releaseDate: "12/10/1994")
+        presenter.findMovie(page: 1, query: query)
     }
 }
 
 extension SearchMovieViewController: SearchMovieViewContract {
     func show(movies: [Movie]) {
-        
+        moviesTableView.setupWith(movies: movies)
     }
     
     func emptyList() {
@@ -58,11 +54,11 @@ extension SearchMovieViewController: SearchMovieViewContract {
     }
     
     func showLoader() {
-        
+        add(loader)
     }
     
     func hideLoader() {
-        
+        loader.remove()
     }
 }
 
@@ -74,7 +70,7 @@ extension SearchMovieViewController: MoviesTableViewContract {
     
     func goToDetail(id: Int) {
         let movieDetail: MovieDetailViewController = loadNibNamed(MovieDetailViewController.NIB_NAME, owner: self)!
-        movieDetail.movieId = 1
+        movieDetail.movieId = id
         self.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }

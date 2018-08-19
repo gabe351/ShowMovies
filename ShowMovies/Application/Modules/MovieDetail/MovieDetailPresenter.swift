@@ -19,18 +19,18 @@ class MovieDetailPresenter: MovieDetailPresenterContract {
     }
     
     func loadMovieDetail(id: Int) {
-//        view.showLoader()
-//        getMovie.movieDetail(id: id) { (callback) in
-//            callback.onSuccess{ (movieDetail) in
-//                self.view.hideLoader()
-//                self.view.show(detail: movieDetail)
-//            }
-//
-//            callback.onFailed{ (error) in
-//                self.view.hideLoader()
-//                self.view.onError()
-//            }
-//        }
+        view.showLoader()
+        getMovie.movieDetail(id: id) { (callback) in
+            callback.onSuccess{ (movieDetail) in
+                self.view.hideLoader()
+                self.view.show(detail: movieDetail)
+            }
+
+            callback.onFailed{ (error) in
+                self.view.hideLoader()
+                self.view.onError()
+            }
+        }
     }
 }
 

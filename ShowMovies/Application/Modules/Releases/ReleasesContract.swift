@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol ReleasesViewContract {
+protocol ReleasesViewContract: class {
     func show(movies: [Movie])
     func emptyList()
-    func onError()
+    func onError(error: Any)
     func showLoader()
     func hideLoader()
 }

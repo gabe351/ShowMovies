@@ -20,6 +20,7 @@ extension UIImageView {
         let urlWithoutSpace = url.trim().replacingOccurrences(of: " ", with: "%20")
         self.sd_addActivityIndicator()
         self.sd_setIndicatorStyle(loaderStyle)
+        self.sd_showActivityIndicatorView()
         self.sd_setImage(with: NSURL(string: urlWithoutSpace) as URL?)
     }
 }

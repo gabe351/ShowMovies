@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SearchMovieViewContract {
+protocol SearchMovieViewContract: class {
     func show(movies: [Movie])
     func emptyList()
     func onError()

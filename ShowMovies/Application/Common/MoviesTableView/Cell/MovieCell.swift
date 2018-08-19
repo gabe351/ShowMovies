@@ -21,7 +21,7 @@ class MovieCell: UITableViewCell {
         let imageUrl         = RemoteUtils.buildImageUrl(path: movie.posterPath)
         movieTitleLabel.text = movie.title
         movieDateLabel.text  = movie.releaseDate
-        movieImageView.setImageFrom(url: movie.posterPath)
+        movieImageView.setImageFrom(url: imageUrl)
     }
 }
 

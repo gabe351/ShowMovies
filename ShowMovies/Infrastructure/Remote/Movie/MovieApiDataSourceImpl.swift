@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class MovieApiDataSourceImpl: MovieApiDataSource {
+public class MovieApiDataSourceImpl: MovieApiDataSource {
     
     private static var INSTANCE: MovieApiDataSourceImpl?
     
@@ -26,7 +26,7 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
         INSTANCE = nil
     }
     
-    func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         let parameters = buildSearchParams(page: page, query: query)
         let path       = "search/movie"
         
@@ -55,7 +55,7 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
         }
     }
     
-    func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         let parameters = buildReleasesParams(page: page)
         let path       = "discover/movie"
         
@@ -84,7 +84,7 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
         }
     }
     
-    func movieDetail(id: Int, _ loadCallback: @escaping (BaseCallback<MovieDetail>) -> Void) {
+    public func movieDetail(id: Int, _ loadCallback: @escaping (BaseCallback<MovieDetail>) -> Void) {
         let parameters = buildDetailParams()
         let path       = "movie/\(id)"
         

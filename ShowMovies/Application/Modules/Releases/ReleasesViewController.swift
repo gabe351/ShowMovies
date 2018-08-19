@@ -12,45 +12,42 @@ class ReleasesViewController: UIViewController {
     
     @IBOutlet weak var moviesTableView: MoviesTableView!
     
+    let loader: LoadingViewController = LoadingViewController()
+    
+    lazy var presenter: ReleasesPresenterContract = {
+        return ReleasesPresenter(view: self,
+                                 getMovie: provideGetMovies())
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         moviesTableView.contract = self
-        moviesTableView.setupWith(movies: [mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie(), mockMovie() , mockMovie()])
-    }
-    
-    func mockMovie() -> Movie {
         
-        return Movie(id: 1,
-                     title: "asfasfa",
-                     originalTitle: "asfasfasf",
-                     voteAverage: 23,
-                     posterPath: "https://img00.deviantart.net/a909/i/2006/138/3/a/protecting_the_loved_one_by_maiss_thro.jpg",
-                     releaseDate: "12/10/1994")
-    }    
+        presenter.loadReleases(page: 1)
+    }        
 }
 
 extension ReleasesViewController: ReleasesViewContract {
     
     func show(movies: [Movie]) {
-        
+        moviesTableView.setupWith(movies: movies)
     }
     
     func emptyList() {
         
     }
     
-    func onError() {
+    func onError(error: Any) {
         
     }
     
     func showLoader() {
-        
+        add(loader)
     }
     
     func hideLoader() {
-        
+        loader.remove()
     }
 }
 
@@ -62,7 +59,7 @@ extension ReleasesViewController: MoviesTableViewContract {
     
     func goToDetail(id: Int) {
         let movieDetail: MovieDetailViewController = loadNibNamed(MovieDetailViewController.NIB_NAME, owner: self)!
-        movieDetail.movieId = 1
+        movieDetail.movieId = id
         self.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }

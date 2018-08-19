@@ -12,20 +12,21 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     
     static let NIB_NAME = "MovieDetailViewController"
     
-    var movieId: Int = 0
-    let loader = LoadingViewController()
-    var movieDetail: MovieDetail?
-    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var overViewLabel: UILabel!
     @IBOutlet weak var overViewTextView: UITextView!
-    //    lazy var presenter: MovieDetailPresenterContract = {
-//        return MovieDetailPresenter(view: self,
-//                                    getMovie: InjectionUseCase.provideGetMovies())
-//    }()
+    
+    var movieId = 0
+    let loader  = LoadingViewController()
+    var movieDetail: MovieDetail?
+    
+    lazy var presenter: MovieDetailPresenterContract = {
+        return MovieDetailPresenter(view: self,
+                                    getMovie: provideGetMovies())
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         configureView()
         
         overViewTextView.layoutManager.allowsNonContiguousLayout = false
-//        presenter.loadMovieDetail(id: movieId)
+        presenter.loadMovieDetail(id: movieId)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,18 +47,17 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     
     
     func show(detail: MovieDetail) {
-//        movieImageView.setImageFrom(url: RemoteUtils.buildImageUrl(path: detail.posterPath), placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
-//        movieTitle.text               = detail.title
-//        releaseDateLabel.text         = "Release: \(detail.releaseDate)"
-//        movieDescriptionTextView.text = detail.overview
-//        genreLabel.text               = "Genre: \(detail.genres.first?.name ?? " ")"
-//        movieDetail                   = detail
+        let imageUrl         = RemoteUtils.buildImageUrl(path: detail.posterPath)
+        let genresTitle = detail.genres.map { genre -> String in genre.name }
+        movieImageView.setImageFrom(url: imageUrl)
+        movieTitleLabel.text  = detail.title
+        releaseDateLabel.text = "Release: \(detail.releaseDate)"
+        genreLabel.text       = genresTitle.joined(separator: ", ")
+        overViewTextView.text = detail.overview                
     }
     
     func onError() {
-//        ToastBuilder(message: "Error on request, check internet", view: self.view)
-//            .with(position: .center)
-//            .show()
+        
     }
     
     func showLoader() {
@@ -74,7 +74,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         }
         
         navigationController.isNavigationBarHidden    = false
-        navigationController.topViewController?.title = "Movie detail"
+        navigationController.topViewController?.title = "Movie Detail"
     }
 }
 

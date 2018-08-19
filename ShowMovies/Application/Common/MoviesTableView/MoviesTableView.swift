@@ -26,7 +26,7 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func setupWith(movies: [Movie]) {
-        self.movies               = movies
+        self.movies = movies
         self.reloadData()
     }
     

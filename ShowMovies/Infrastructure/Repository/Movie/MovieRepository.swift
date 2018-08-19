@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol MovieRepository: class {
-                            
+public protocol MovieRepository: class {
+    
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)
     
     func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)
