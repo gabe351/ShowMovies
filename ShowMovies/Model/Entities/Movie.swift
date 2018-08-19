@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie {    
+public struct Movie {    
     let id: Int
     let title: String
     let originalTitle: String

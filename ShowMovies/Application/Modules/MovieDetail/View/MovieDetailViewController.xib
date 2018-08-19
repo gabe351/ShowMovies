@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -53,8 +54,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-DG-BnQ">
-                                <rect key="frame" x="0.0" y="507" width="375" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-DG-BnQ">
+                                <rect key="frame" x="0.0" y="527" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="j61-GQ-BFp"/>
                                 </constraints>
@@ -62,19 +63,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rWm-GW-rZ9">
+                                <rect key="frame" x="13" y="556" width="345" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="HKN-hG-E5p" firstAttribute="top" secondItem="yLB-i9-klH" secondAttribute="bottom" constant="12" id="0xo-Ra-UZ4"/>
                             <constraint firstItem="gvF-DG-BnQ" firstAttribute="top" secondItem="2jp-A0-EvH" secondAttribute="bottom" constant="8" id="2e4-23-hi8"/>
                             <constraint firstItem="yLB-i9-klH" firstAttribute="top" secondItem="iNf-Lz-tGn" secondAttribute="top" constant="2" id="7is-1w-muS"/>
+                            <constraint firstItem="rWm-GW-rZ9" firstAttribute="leading" secondItem="iNf-Lz-tGn" secondAttribute="leading" constant="13" id="EJD-UL-SW5"/>
                             <constraint firstItem="SBs-Pe-HNv" firstAttribute="top" secondItem="yLB-i9-klH" secondAttribute="bottom" constant="76" id="Em2-Sg-y2R"/>
                             <constraint firstAttribute="trailing" secondItem="yLB-i9-klH" secondAttribute="trailing" id="HTz-eh-pX4"/>
                             <constraint firstItem="yLB-i9-klH" firstAttribute="trailing" secondItem="HKN-hG-E5p" secondAttribute="trailing" id="MWz-31-DjM"/>
                             <constraint firstItem="gvF-DG-BnQ" firstAttribute="leading" secondItem="HKN-hG-E5p" secondAttribute="leading" id="Tsa-az-TKB"/>
                             <constraint firstItem="2jp-A0-EvH" firstAttribute="top" secondItem="SBs-Pe-HNv" secondAttribute="bottom" constant="8" id="XBN-jD-uqw"/>
                             <constraint firstItem="yLB-i9-klH" firstAttribute="centerX" secondItem="iNf-Lz-tGn" secondAttribute="centerX" id="c9H-NF-bs4"/>
+                            <constraint firstItem="rWm-GW-rZ9" firstAttribute="top" secondItem="gvF-DG-BnQ" secondAttribute="bottom" constant="8" id="e05-XE-zu6"/>
                             <constraint firstItem="SBs-Pe-HNv" firstAttribute="leading" secondItem="2jp-A0-EvH" secondAttribute="leading" id="iQ4-6W-pca"/>
+                            <constraint firstAttribute="trailing" secondItem="rWm-GW-rZ9" secondAttribute="trailing" constant="17" id="iwY-b6-Gkd"/>
                             <constraint firstItem="yLB-i9-klH" firstAttribute="leading" secondItem="iNf-Lz-tGn" secondAttribute="leading" id="j6n-4g-nYq"/>
+                            <constraint firstAttribute="bottom" secondItem="rWm-GW-rZ9" secondAttribute="bottom" constant="19" id="jyY-Nt-eQL"/>
                             <constraint firstItem="gvF-DG-BnQ" firstAttribute="trailing" secondItem="HKN-hG-E5p" secondAttribute="trailing" id="kn4-Kt-Dp3"/>
                             <constraint firstItem="SBs-Pe-HNv" firstAttribute="leading" secondItem="iNf-Lz-tGn" secondAttribute="leading" constant="14" id="kys-E4-fcy"/>
                             <constraint firstAttribute="trailing" secondItem="SBs-Pe-HNv" secondAttribute="trailing" constant="17" id="lXp-sT-fcm"/>
@@ -91,8 +103,17 @@
                     <constraint firstItem="iNf-Lz-tGn" firstAttribute="top" secondItem="Sje-4z-gyE" secondAttribute="top" id="faw-m8-555"/>
                     <constraint firstAttribute="trailing" secondItem="iNf-Lz-tGn" secondAttribute="trailing" id="yIz-ow-Lzj"/>
                 </constraints>
+                <viewLayoutGuide key="safeArea" id="4Sm-So-EFw"/>
             </view>
             <size key="freeformSize" width="375" height="800"/>
+            <connections>
+                <outlet property="genreLabel" destination="2jp-A0-EvH" id="WKQ-hy-b9n"/>
+                <outlet property="movieImageView" destination="yLB-i9-klH" id="iNo-gz-M0o"/>
+                <outlet property="movieTitleLabel" destination="HKN-hG-E5p" id="Paw-x8-jWT"/>
+                <outlet property="overViewLabel" destination="gvF-DG-BnQ" id="rrF-cX-4Vq"/>
+                <outlet property="overViewTextView" destination="rWm-GW-rZ9" id="MNy-Cv-ZXz"/>
+                <outlet property="releaseDateLabel" destination="SBs-Pe-HNv" id="JIb-Ly-ZSY"/>
+            </connections>
             <point key="canvasLocation" x="-51.5" y="-32"/>
         </viewController>
     </objects>

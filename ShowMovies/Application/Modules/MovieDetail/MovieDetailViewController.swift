@@ -16,7 +16,13 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     let loader = LoadingViewController()
     var movieDetail: MovieDetail?
     
-//    lazy var presenter: MovieDetailPresenterContract = {
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var overViewLabel: UILabel!
+    @IBOutlet weak var overViewTextView: UITextView!
+    //    lazy var presenter: MovieDetailPresenterContract = {
 //        return MovieDetailPresenter(view: self,
 //                                    getMovie: InjectionUseCase.provideGetMovies())
 //    }()
@@ -28,6 +34,8 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureView()
+        
+        overViewTextView.layoutManager.allowsNonContiguousLayout = false
 //        presenter.loadMovieDetail(id: movieId)
     }
     
