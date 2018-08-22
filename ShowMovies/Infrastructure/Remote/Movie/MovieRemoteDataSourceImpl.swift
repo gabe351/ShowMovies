@@ -33,7 +33,7 @@ public class MovieRemoteDataSourceImpl: MovieRemoteDataSource {
         apiDataSource?.searchMovieBy(query: query, page: page, loadCallback)
     }
     
-    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         apiDataSource?.allReleasesBy(page: page, loadCallback)
     }
     

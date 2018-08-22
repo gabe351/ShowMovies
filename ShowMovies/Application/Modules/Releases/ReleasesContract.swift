@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ReleasesViewContract: class {
-    func show(movies: [Movie])
+    func show(baseMovie: BaseMovie)
     func emptyList()
     func onError(error: Any)
     func showLoader()

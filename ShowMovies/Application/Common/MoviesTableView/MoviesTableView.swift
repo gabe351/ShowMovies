@@ -49,6 +49,15 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         contract?.goToDetail(id: movies[indexPath.row].id)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == movies.count - 1 {
+            print("fazer request novo pai")            
+//            if movies.count < totalMovies {
+//                 execute new request
+//            }
+        }
+    }
             
     private func initialConfiguration() {
         self.separatorStyle = .none

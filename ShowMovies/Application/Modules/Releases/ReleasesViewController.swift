@@ -13,11 +13,13 @@ class ReleasesViewController: UIViewController {
     @IBOutlet weak var moviesTableView: MoviesTableView!
     
     let loader: LoadingViewController = LoadingViewController()
+    var movies = [Movie]()
     
     lazy var presenter: ReleasesPresenterContract = {
         return ReleasesPresenter(view: self,
                                  getMovie: provideGetMovies())
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,9 @@ class ReleasesViewController: UIViewController {
 
 extension ReleasesViewController: ReleasesViewContract {
     
-    func show(movies: [Movie]) {
-        moviesTableView.setupWith(movies: movies)
+    func show(baseMovie: BaseMovie) {
+        moviesTableView.setupWith(movies: baseMovie.movies)
+        self.movies = baseMovie.movies
     }
     
     func emptyList() {

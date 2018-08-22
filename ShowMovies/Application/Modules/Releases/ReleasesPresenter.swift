@@ -22,7 +22,7 @@ class ReleasesPresenter: ReleasesPresenterContract {
         self.view?.showLoader()
         getMovie.allReleasesBy(page: page) { (callback) in
             callback.onSuccess{ [unowned self] movies in
-                self.view?.show(movies: movies)
+                self.view?.show(baseMovie: movies)
                 self.view?.hideLoader()
             }
             

@@ -56,7 +56,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
         }
     }
     
-    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         let parameters = buildReleasesParams(page: page)
         let path       = "discover/movie"
         
@@ -74,9 +74,10 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
                     return
                 }
                 
-                let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
+//                let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
+                let baseMovie = convertBaseMovieResponseToEntity(response: response)
                 
-                loadCallback(BaseCallback.success(movies))
+                loadCallback(BaseCallback.success(baseMovie))
                 break
                 
             case .failure(let error):

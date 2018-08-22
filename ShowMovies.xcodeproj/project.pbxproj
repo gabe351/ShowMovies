@@ -64,6 +64,8 @@
 		04B8A00D21283C2C00D7CA77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B8A00C21283C2C00D7CA77 /* Assets.xcassets */; };
 		04B8A01021283C2C00D7CA77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B8A00E21283C2C00D7CA77 /* LaunchScreen.storyboard */; };
 		04B8A01B21283C2C00D7CA77 /* ShowMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A01A21283C2C00D7CA77 /* ShowMoviesTests.swift */; };
+		04C0F21F212CF20900DF5DAA /* BaseMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0F21E212CF20900DF5DAA /* BaseMovie.swift */; };
+		04C0F221212D028300DF5DAA /* BaseMovieConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0F220212D028300DF5DAA /* BaseMovieConverter.swift */; };
 		A7DDD15B3DC53A161BBDFB42 /* Pods_ShowMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55195AC78746F12D13506DC7 /* Pods_ShowMovies.framework */; };
 		B13884138C0440AD4E166B50 /* Pods_ShowMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF6098DE75EA08CB8C38124 /* Pods_ShowMoviesTests.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +142,8 @@
 		04B8A01621283C2C00D7CA77 /* ShowMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B8A01A21283C2C00D7CA77 /* ShowMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoviesTests.swift; sourceTree = "<group>"; };
 		04B8A01C21283C2C00D7CA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C0F21E212CF20900DF5DAA /* BaseMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMovie.swift; sourceTree = "<group>"; };
+		04C0F220212D028300DF5DAA /* BaseMovieConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMovieConverter.swift; sourceTree = "<group>"; };
 		55195AC78746F12D13506DC7 /* Pods_ShowMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9E78A9E2AF0CE83F02850F /* Pods-ShowMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMoviesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9946686EEB2748FA6BBE3D19 /* Pods-ShowMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 				049CCA9F2128505800BB4C39 /* Movie.swift */,
 				049CCAAD2128BB2B00BB4C39 /* MovieDetail.swift */,
 				049CCAAF2128BB4800BB4C39 /* Genre.swift */,
+				04C0F21E212CF20900DF5DAA /* BaseMovie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 		04B2FC71212A094800D11769 /* Converters */ = {
 			isa = PBXGroup;
 			children = (
+				04C0F220212D028300DF5DAA /* BaseMovieConverter.swift */,
 				04B2FC72212A095500D11769 /* MovieConverter.swift */,
 				04B2FC74212A0A0E00D11769 /* GenreConverter.swift */,
 			);
@@ -737,7 +743,9 @@
 				049CCABE2128BDF700BB4C39 /* ViewUtils.swift in Sources */,
 				04B2FC67212A089C00D11769 /* MovieApiDataSourceImpl.swift in Sources */,
 				04B2FC61212A03F100D11769 /* MovieRepositoryImpl.swift in Sources */,
+				04C0F221212D028300DF5DAA /* BaseMovieConverter.swift in Sources */,
 				049CCAA02128505800BB4C39 /* Movie.swift in Sources */,
+				04C0F21F212CF20900DF5DAA /* BaseMovie.swift in Sources */,
 				04B8A00821283C2A00D7CA77 /* ViewController.swift in Sources */,
 				04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */,
 				049CCAB32128BBB400BB4C39 /* GetMovies.swift in Sources */,

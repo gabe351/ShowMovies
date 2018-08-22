@@ -16,7 +16,7 @@ public class GetMovies {
         self.repository = repository
     }
     
-    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         repository?.allReleasesBy(page: page, loadCallback)
     }
 
