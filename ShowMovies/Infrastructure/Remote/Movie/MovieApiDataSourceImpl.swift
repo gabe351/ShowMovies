@@ -40,6 +40,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
                 
                 if moviesResponse.isEmpty {
                     loadCallback(BaseCallback.emptyData())
+                    return
                 }
                 
                 let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
@@ -70,6 +71,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
                 
                 if moviesResponse.isEmpty {
                     loadCallback(BaseCallback.emptyData())
+                    return
                 }
                 
                 let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
@@ -105,7 +107,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
     
     private func buildDetailParams() -> [String:Any] {
         
-        let apiKey = "0bd449b4a197142635ab358c297053e6"
+        let apiKey = "1f54bd990f1cdfb230adb312546d765d"
         
         let parameters: [String: Any] = [
             "api_key" : apiKey,
@@ -114,7 +116,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
         return parameters
     }
     
-    private func buildSearchParams(apiKey: String = "0bd449b4a197142635ab358c297053e6",
+    private func buildSearchParams(apiKey: String = "1f54bd990f1cdfb230adb312546d765d",
                                    page: Int,
                                    query: String) -> [String:Any] {
         let parameters: [String: Any] = [
@@ -126,7 +128,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
         return parameters
     }
     
-    private func buildReleasesParams(apiKey: String = "0bd449b4a197142635ab358c297053e6",
+    private func buildReleasesParams(apiKey: String = "1f54bd990f1cdfb230adb312546d765d",
                                      sortBy: String = "release_date.asc",
                                      page: Int) -> [String:Any] {
         var year     = 2019
