@@ -11,6 +11,8 @@ import UIKit
 class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     var movies = [Movie]()
+    var lastPage: Int?
+    var currentPage: Int?
     weak var contract: MoviesTableViewContract?
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,10 +54,16 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == movies.count - 1 {
-            print("fazer request novo pai")            
-//            if movies.count < totalMovies {
-//                 execute new request
-//            }
+            print("fazer request novo pai")
+            
+            guard let actualPage = currentPage, let finalPage = lastPage else {
+                return
+            }
+            let nextPage = actualPage + 1
+            
+            if nextPage <= finalPage {
+                contract?.request(nextPage: nextPage)
+            }
         }
     }
             

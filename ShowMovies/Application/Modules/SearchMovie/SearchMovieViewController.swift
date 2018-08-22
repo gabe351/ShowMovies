@@ -26,6 +26,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +40,8 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        
         guard let query = searchBar.text else {
             return
         }
@@ -47,6 +50,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
             configureEmptyLabelWith(text: "Type some text to search for movies")
             return
         }
+        
         self.query = query
         presenter.findMovie(page: 1, query: query)
     }
