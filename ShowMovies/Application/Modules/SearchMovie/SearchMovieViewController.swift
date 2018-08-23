@@ -15,8 +15,10 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var emptyLabel: UILabel!
     
     let loader: LoadingViewController = LoadingViewController()
-    var query  = ""
-    var movies = [Movie]()
+    var query       = ""
+    var movies      = [Movie]()
+    var currentPage = 1
+    var lastPage    = 1
     
     lazy var presenter: SearchMoviePresenterContract = {
         return SearchMoviePresenter(view: self,
@@ -51,7 +53,9 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
             return
         }
         
-        self.query = query
+        self.movies                 = [Movie]()
+        moviesTableView.currentPage = 1
+        self.query                  = query
         presenter.findMovie(page: 1, query: query)
     }
 }
@@ -61,6 +65,7 @@ extension SearchMovieViewController: SearchMovieViewContract {
         configure(emptyLabelAlpha: 0,
                   moviesTableViewAlpha: 1)
         moviesTableView.setupWith(movies: movies)
+        
         self.movies = movies
     }
     
@@ -98,7 +103,7 @@ extension SearchMovieViewController: SearchMovieViewContract {
 extension SearchMovieViewController: MoviesTableViewContract {
     
     func request(nextPage: Int) {
-        
+//        presenter.findMovie(page: nextPage, query: query)
     }
     
     func goToDetail(id: Int) {
