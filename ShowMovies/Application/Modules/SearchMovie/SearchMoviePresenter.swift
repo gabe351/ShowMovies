@@ -21,9 +21,9 @@ class SearchMoviePresenter: SearchMoviePresenterContract {
     func findMovie(page: Int, query: String) {
         view?.showLoader()
         getMovie.searchMovieBy(query: query, page: page) { (useCaseCallback) in
-            useCaseCallback.onSuccess { [unowned self] movie in
+            useCaseCallback.onSuccess { [unowned self] baseMovie in
                 self.view?.hideLoader()
-                self.view?.show(movies: movie)
+                self.view?.show(baseMovie: baseMovie)
             }
             
             useCaseCallback.onEmptyData { [unowned self] in

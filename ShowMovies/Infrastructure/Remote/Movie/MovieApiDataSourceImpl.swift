@@ -26,7 +26,7 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
         INSTANCE = nil
     }
     
-    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         let parameters = buildSearchParams(page: page, query: query)
         let path       = "search/movie"
         
@@ -43,9 +43,9 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
                     return
                 }
                 
-                let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
+                let baseMovie = convertBaseMovieResponseToEntity(response: response)
                 
-                loadCallback(BaseCallback.success(movies))
+                loadCallback(BaseCallback.success(baseMovie))
                 
                 break
                 
@@ -74,7 +74,6 @@ public class MovieApiDataSourceImpl: MovieApiDataSource {
                     return
                 }
                 
-//                let movies = convertMoviesResponsesToEntities(responses: moviesResponse)
                 let baseMovie = convertBaseMovieResponseToEntity(response: response)
                 
                 loadCallback(BaseCallback.success(baseMovie))

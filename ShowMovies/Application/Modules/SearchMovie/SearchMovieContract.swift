@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SearchMovieViewContract: class {
-    func show(movies: [Movie])
+    func show(baseMovie: BaseMovie)
     func emptyList()
     func onError()
     func showLoader()

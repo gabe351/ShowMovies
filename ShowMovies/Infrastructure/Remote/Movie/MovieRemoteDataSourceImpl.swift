@@ -29,7 +29,7 @@ public class MovieRemoteDataSourceImpl: MovieRemoteDataSource {
         INSTANCE = nil
     }
     
-    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         apiDataSource?.searchMovieBy(query: query, page: page, loadCallback)
     }
     

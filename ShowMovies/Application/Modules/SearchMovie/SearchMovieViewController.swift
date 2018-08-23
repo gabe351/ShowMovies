@@ -37,7 +37,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         moviesTableView.contract = self
         
         if movies.isEmpty {
-            configureEmptyLabelWith(text: "Type a query to search for movies")
+            showEmptyLabelWith(text: "Type a query to search for movies")
         }
     }
     
@@ -49,7 +49,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         }
         
         if query.isEmpty {
-            configureEmptyLabelWith(text: "Type some text to search for movies")
+            showEmptyLabelWith(text: "Type some text to search for movies")
             return
         }
         
@@ -61,49 +61,45 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
 }
 
 extension SearchMovieViewController: SearchMovieViewContract {
-    func show(movies: [Movie]) {
-        configure(emptyLabelAlpha: 0,
-                  moviesTableViewAlpha: 1)
-        moviesTableView.setupWith(movies: movies)
-        
-        self.movies = movies
+    func show(baseMovie: BaseMovie) {
+        let allMovies               = movies + baseMovie.movies
+        self.movies                 = allMovies
+        currentPage                 = baseMovie.page
+        lastPage                    = baseMovie.totalPages
+        moviesTableView.currentPage = currentPage
+        moviesTableView.lastPage    = lastPage
+        emptyLabel.alpha            = 0
+        moviesTableView.setupWith(movies: allMovies)
     }
     
     func emptyList() {
-        configureEmptyLabelWith(text: "Sorry, we do not found any movie for your search: \(query)")
+        showEmptyLabelWith(text: "Sorry, we do not found any movie for your search: \(query)")
         moviesTableView.setupWith(movies: [])
     }
     
     func onError() {
-        configureEmptyLabelWith(text: "Sorry, we have some errors to find movies")
+        showEmptyLabelWith(text: "Sorry, we have some errors to find movies")
     }
     
     func showLoader() {
         add(loader)
-        configure(emptyLabelAlpha: 0,
-                  moviesTableViewAlpha: 0)
+        emptyLabel.alpha = 0
     }
     
     func hideLoader() {
         loader.remove()
     }
     
-    private func configureEmptyLabelWith(text: String) {
-        emptyLabel.text = text
-        configure(emptyLabelAlpha: 1, moviesTableViewAlpha: 0)
-    }
-    
-    private func configure(emptyLabelAlpha: CGFloat,
-                           moviesTableViewAlpha: CGFloat) {
-        self.moviesTableView.alpha = moviesTableViewAlpha
-        self.emptyLabel.alpha      = emptyLabelAlpha
-    }
+    private func showEmptyLabelWith(text: String) {
+        emptyLabel.text  = text
+        emptyLabel.alpha = 1
+    }    
 }
 
 extension SearchMovieViewController: MoviesTableViewContract {
     
     func request(nextPage: Int) {
-//        presenter.findMovie(page: nextPage, query: query)
+        presenter.findMovie(page: nextPage, query: query)
     }
     
     func goToDetail(id: Int) {

@@ -31,7 +31,7 @@ public class MovieRepositoryImpl: MovieRepository {
         INSTANCE = nil
     }
     
-    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         remoteDataSource?.searchMovieBy(query: query, page: page, loadCallback)
     }
     

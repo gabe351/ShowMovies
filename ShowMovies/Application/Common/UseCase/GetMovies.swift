@@ -20,7 +20,7 @@ public class GetMovies {
         repository?.allReleasesBy(page: page, loadCallback)
     }
 
-    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
+    public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         repository?.searchMovieBy(query: query, page: page, loadCallback)
     }
 
