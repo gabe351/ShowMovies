@@ -47,7 +47,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         guard let query = searchBar.text else {
             return
         }
-                        
+        
         self.movies                 = [Movie]()
         moviesTableView.currentPage = 1
         self.query                  = query
@@ -68,8 +68,14 @@ extension SearchMovieViewController: SearchMovieViewContract {
     }
     
     func emptyList() {
-        showEmptyLabelWith(text: "Sorry, we do not found any movie for your search: \(query)")
         moviesTableView.setupWith(movies: [])
+        var message = "Sorry, we do not found any movie for your search: \(query)"
+        
+        if query.isEmpty {
+            message = "Type some text to search for movies"
+        }
+        
+        showEmptyLabelWith(text: message)
     }
     
     func onError() {
