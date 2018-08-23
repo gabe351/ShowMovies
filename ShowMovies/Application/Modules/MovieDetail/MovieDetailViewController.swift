@@ -17,7 +17,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var overViewLabel: UILabel!
-    @IBOutlet weak var overViewTextView: UITextView!
+    @IBOutlet weak var overViewContentLabel: UILabel!
     
     var movieId = 0
     let loader  = LoadingViewController()
@@ -36,7 +36,6 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         super.viewWillAppear(animated)
         configureView()
         
-        overViewTextView.layoutManager.allowsNonContiguousLayout = false
         presenter.loadMovieDetail(id: movieId)
     }
     
@@ -50,10 +49,10 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         let imageUrl         = RemoteUtils.buildImageUrl(path: detail.posterPath)
         let genresTitle = detail.genres.map { genre -> String in genre.name }
         movieImageView.setImageFrom(url: imageUrl)
-        movieTitleLabel.text  = detail.title
-        releaseDateLabel.text = "Release: \(detail.releaseDate)"
-        genreLabel.text       = genresTitle.joined(separator: ", ")
-        overViewTextView.text = detail.overview                
+        movieTitleLabel.text      = detail.title
+        releaseDateLabel.text     = "Release: " + detail.releaseDate
+        genreLabel.text           = "Genre: " + genresTitle.joined(separator: ", ")
+        overViewContentLabel.text = detail.overview
     }
     
     func onError() {
