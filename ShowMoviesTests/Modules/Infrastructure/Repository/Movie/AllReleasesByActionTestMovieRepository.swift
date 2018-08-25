@@ -12,7 +12,7 @@ import Nimble
 /**
  Unit tests for the implementation of {@link MovieRepositoryImpl}
  */
-class AllReleasesByActionTest: QuickSpec {
+class AllReleasesByActionTestMovieRepository: QuickSpec {
     override func spec() {
         
         let remoteDataSource = MovieRemoteDataSourceMock()
