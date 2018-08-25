@@ -13,6 +13,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     static let NIB_NAME = "MovieDetailViewController"
     
     @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieBgImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
@@ -49,6 +50,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         let imageUrl         = RemoteUtils.buildImageUrl(path: detail.posterPath)
         let genresTitle = detail.genres.map { genre -> String in genre.name }
         movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+        movieBgImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
         movieTitleLabel.text      = detail.title
         releaseDateLabel.text     = "Release: " + detail.releaseDate
         genreLabel.text           = "Genre: " + genresTitle.joined(separator: ", ")
