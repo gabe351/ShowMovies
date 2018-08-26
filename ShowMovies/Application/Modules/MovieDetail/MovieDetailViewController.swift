@@ -35,8 +35,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureView()
-        
+        configureView()        
         presenter.loadMovieDetail(id: movieId)
     }
     
@@ -47,14 +46,17 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     
     
     func show(detail: MovieDetail) {
-        let imageUrl         = RemoteUtils.buildImageUrl(path: detail.posterPath)
-        let genresTitle = detail.genres.map { genre -> String in genre.name }
-        movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
-        movieBgImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
-        movieTitleLabel.text      = detail.title
-        releaseDateLabel.text     = "Release: " + detail.releaseDate
-        genreLabel.text           = "Genre: " + genresTitle.joined(separator: ", ")
-        overViewContentLabel.text = detail.overview
+        let imageUrl    = RemoteUtils.buildImageUrl(path: detail.posterPath)
+        let genresTitle = detail.genres.map { genre -> String in genre.name }        
+        animateViews { [unowned self] in
+            self.movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+            self.movieBgImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+            self.movieTitleLabel.text      = detail.title
+            self.releaseDateLabel.text     = "Release: " + detail.releaseDate
+            self.genreLabel.text           = "Genre: " + genresTitle.joined(separator: ", ")
+            self.overViewLabel.text        = "OverView"
+            self.overViewContentLabel.text = detail.overview
+        }
     }
     
     func onError() {
@@ -76,6 +78,23 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
         
         navigationController.isNavigationBarHidden    = false
         navigationController.topViewController?.title = "Movie Detail"
+    }
+    
+    private func animateViews(_ actionBlock: @escaping () -> ()) {
+        UIView.animate(withDuration: 0.5) { [unowned self] in
+            self.showViews()
+            actionBlock()
+        }
+    }
+    
+    private func showViews() {
+        self.movieImageView.alpha       = 1
+        self.movieBgImageView.alpha     = 1
+        self.movieTitleLabel.alpha      = 1
+        self.releaseDateLabel.alpha     = 1
+        self.genreLabel.alpha           = 1
+        self.overViewLabel.alpha        = 1
+        self.overViewContentLabel.alpha = 1
     }
 }
 
