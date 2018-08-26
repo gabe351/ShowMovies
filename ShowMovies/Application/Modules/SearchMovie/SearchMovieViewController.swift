@@ -29,6 +29,7 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
+        self.tabBarController?.tabBar.tintColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {

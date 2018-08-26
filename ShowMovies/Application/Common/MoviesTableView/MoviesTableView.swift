@@ -54,11 +54,11 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == movies.count - 1 {
-            print("fazer request novo pai")
             
             guard let actualPage = currentPage, let finalPage = lastPage else {
                 return
             }
+            
             let nextPage = actualPage + 1
             
             if nextPage <= finalPage {
@@ -82,6 +82,4 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-
-
 

@@ -36,14 +36,13 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureView()        
-        presenter.loadMovieDetail(id: movieId)
+        presenter.loadMovieDetail(id: movieId)        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
     
     func show(detail: MovieDetail) {
         let imageUrl     = RemoteUtils.buildImageUrl(path: detail.posterPath)

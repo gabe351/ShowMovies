@@ -32,6 +32,7 @@ class ReleasesViewController: UIViewController {
         
         presenter.loadReleases(page: currentPage)
         hideKeyboardWhenTappedAround()
+        self.tabBarController?.tabBar.tintColor = UIColor.white        
     }            
 }
 
