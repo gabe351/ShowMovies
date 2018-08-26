@@ -32,20 +32,33 @@ public func convertMoviesResponsesToEntities(responses: [MovieResponse]) -> [Mov
 
 public func convertMovieDetailResponseToEntity(response: MovieDetailResponse) -> MovieDetail {
     
-    var foundGenres = [Genre]()
+    
+    let emptyOverviewText = "Unfortunately we do not have overview for this movie."
+    var foundGenres       = [Genre]()
+    let id                = defaultIntIfNil(response.id)
+    let title             = defaultStringIfNil(response.title)
+    let originalTitle     = defaultStringIfNil(response.originalTitle)
+    let voteAverange      = defaultFloatIfNil(response.voteAverage)
+    let posterPath        = defaultStringIfNil(response.posterPath)
+    let backdropPath      = defaultStringIfNil(response.backdropPath)
+    let runtime           = defaultIntIfNil(response.runtime)
+    let releaseDate       = defaultStringIfNil(response.releaseDate)
+    var overview          = defaultStringIfNil(response.overview)
+    
+    if overview.isEmpty { overview = emptyOverviewText }
     
     if let genres = response.genres {
         foundGenres = convertGenresResponsesToEntities(responses: genres)
     }
     
-    return MovieDetail(id: defaultIntIfNil(response.id),
-                       title: defaultStringIfNil(response.title),
-                       originalTitle: defaultStringIfNil(response.originalTitle),
-                       voteAverage: defaultFloatIfNil(response.voteAverage),
-                       posterPath: defaultStringIfNil(response.posterPath),
-                       backdropPath: defaultStringIfNil(response.backdropPath),
-                       overview: defaultStringIfNil(response.overview),
+    return MovieDetail(id: id,
+                       title: title,
+                       originalTitle: originalTitle,
+                       voteAverage: voteAverange,
+                       posterPath: posterPath,
+                       backdropPath: backdropPath,
+                       overview: overview,
                        genres: foundGenres,
-                       runtime: defaultIntIfNil(response.runtime),
-                       releaseDate: defaultStringIfNil(response.releaseDate))
+                       runtime: runtime,
+                       releaseDate: releaseDate)
 }

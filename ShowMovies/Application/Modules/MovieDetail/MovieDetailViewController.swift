@@ -46,8 +46,8 @@ class MovieDetailViewController: UIViewController, MovieDetailViewContract {
     
     
     func show(detail: MovieDetail) {
-        let imageUrl    = RemoteUtils.buildImageUrl(path: detail.posterPath)
-        let genresTitle = detail.genres.map { genre -> String in genre.name }        
+        let imageUrl     = RemoteUtils.buildImageUrl(path: detail.posterPath)
+        let genresTitle  = detail.genres.map { genre -> String in genre.name }        
         animateViews { [unowned self] in
             self.movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
             self.movieBgImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
