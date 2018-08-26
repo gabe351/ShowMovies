@@ -29,7 +29,7 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     func setupWith(movies: [Movie]) {
         self.movies = movies
-        self.reloadData()
+        animateReloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,4 +70,18 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     private func initialConfiguration() {
         self.separatorStyle = .none
     }
+    
+    private func animateReloadData() {
+        if currentPage == 1 {
+            UIView.transition(with: self,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.reloadData() })
+        } else {
+            reloadDataSmoothly()
+        }
+    }
 }
+
+
+

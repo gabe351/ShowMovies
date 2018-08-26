@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AB4962132C91500844FD1 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AB4952132C91500844FD1 /* UITableViewExtension.swift */; };
 		049CCA6C2128401500BB4C39 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA6B2128401500BB4C39 /* UIImageViewExtension.swift */; };
 		049CCA6F2128404900BB4C39 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA6E2128404900BB4C39 /* StringExtension.swift */; };
 		049CCA71212841B000BB4C39 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041AB4952132C91500844FD1 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		049CCA6B2128401500BB4C39 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		049CCA6E2128404900BB4C39 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				049CCA70212841B000BB4C39 /* UIActivityIndicatorView.swift */,
 				049CCA72212841C900BB4C39 /* UIColorExtension.swift */,
 				049CCA742128421300BB4C39 /* UIViewControllerExtension.swift */,
+				041AB4952132C91500844FD1 /* UITableViewExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				049CCAB52128BBFF00BB4C39 /* MovieDetailPresenter.swift in Sources */,
 				049CCA71212841B000BB4C39 /* UIActivityIndicatorView.swift in Sources */,
 				04B2FC84212A0D8B00D11769 /* ReleasesPresenter.swift in Sources */,
+				041AB4962132C91500844FD1 /* UITableViewExtension.swift in Sources */,
 				04B2FC86212A11FF00D11769 /* SearchMoviePresenter.swift in Sources */,
 				04B2FC6E212A092100D11769 /* MovieDetailResponse.swift in Sources */,
 				04B2FC80212A0D1B00D11769 /* InjectionRepository.swift in Sources */,

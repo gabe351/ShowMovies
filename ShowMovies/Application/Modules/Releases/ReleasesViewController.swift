@@ -32,8 +32,7 @@ class ReleasesViewController: UIViewController {
         
         presenter.loadReleases(page: currentPage)
         hideKeyboardWhenTappedAround()
-    }
-    
+    }            
 }
 
 extension ReleasesViewController: ReleasesViewContract {
