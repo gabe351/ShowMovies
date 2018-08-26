@@ -10,15 +10,7 @@ import UIKit
 import UIColor_Hex_Swift
 
 extension UIColor {
-    
-    static var baseRed: UIColor {
-        return UIColor("#7A1719")
-    }
-    
-    static var baseOrange: UIColor {
-        return UIColor("#EE3923")
-    }
-    
+            
     static var lightBlue: UIColor {
         return UIColor("#21A7A7")
     }
