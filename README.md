@@ -12,6 +12,7 @@ What you need to run this project:
 ### Installing
 
 1 - Run 'pod install' from the project source directory.
+
 2 - Open the .xcworkspace file.
 
 ## Running instructions
