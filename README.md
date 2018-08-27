@@ -2,6 +2,9 @@
 
 This code is for a challenge proposed by ArcTouch.
 
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat-square)
+
+
 ### Requirements
 
 What you need to run this project:
