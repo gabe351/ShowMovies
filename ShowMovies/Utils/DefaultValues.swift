@@ -28,6 +28,19 @@ public func defaultBoolIfNil(_ value: Bool?, defaultValue: Bool = false) -> Bool
     return defaultIfNil(value, defaultValue: defaultValue)
 }
 
+public func defaultArrayInt(_ array: [Int]?) -> [Int] {
+    var defaultArray = [Int]()
+    guard let foundInts = array else {
+        return defaultArray
+    }
+    
+    foundInts.forEach {
+        defaultArray.append(defaultIntIfNil($0))
+    }
+    
+    return defaultArray
+}
+
 public func defaultIfNil<T>(_ value: T?, defaultValue: T) -> T {
     if value == nil {
         return defaultValue

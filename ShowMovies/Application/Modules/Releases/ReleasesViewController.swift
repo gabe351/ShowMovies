@@ -30,10 +30,19 @@ class ReleasesViewController: UIViewController {
         moviesTableView.currentPage = currentPage
         moviesTableView.lastPage    = lastPage
         
-        presenter.loadReleases(page: currentPage)
         hideKeyboardWhenTappedAround()
+        presenter.loadReleases(page: currentPage)
         self.tabBarController?.tabBar.tintColor = UIColor.white        
-    }            
+    }
+    
+    private func buildAlertWith(title: String, message: String, actionTitle: String, _ actionClosure: @escaping () -> ()) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action) in
+            actionClosure()
+        }))
+        
+        return alert
+    }
 }
 
 extension ReleasesViewController: ReleasesViewContract {
@@ -49,11 +58,21 @@ extension ReleasesViewController: ReleasesViewContract {
     }
     
     func emptyList() {
-        
+        let alert = buildAlertWith(title: "Empty List", message: "We got a empty list.", actionTitle: "ok") { [unowned self] in
+            self.dismiss(animated: true, completion: nil)
+        }
+        self.present(alert, animated: true, completion: nil)
     }
     
     func onError(error: Any) {
+        let title   = "Failed :("
+        let message = "Sorry, we had some error to load movies click 'Reload' to try again"
+        let actionTitle = "Reload"
+        let alert = buildAlertWith(title: title, message: message, actionTitle: actionTitle) { [unowned self] in
+            self.presenter.loadReleases(page: self.currentPage)
+        }
         
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showLoader() {

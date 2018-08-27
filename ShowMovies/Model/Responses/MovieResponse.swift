@@ -17,6 +17,8 @@ public class MovieResponse: NSObject, Mappable {
     var voteAverage: Float?
     var posterPath: String?
     var releaseDate: String?
+    var genreIds: [Int]?
+    
     
     override init() {
         super.init()
@@ -33,6 +35,7 @@ public class MovieResponse: NSObject, Mappable {
         voteAverage   <- map[APIField.voteAverage]
         posterPath    <- map[APIField.posterPath]
         releaseDate   <- map[APIField.releaseDate]
+        genreIds      <- map[APIField.genreIds]
     }
     
     private struct APIField {
@@ -43,6 +46,7 @@ public class MovieResponse: NSObject, Mappable {
         static let voteAverage   = "vote_average"
         static let posterPath    = "poster_path"
         static let releaseDate   = "release_date"
+        static let genreIds      = "genre_ids"
     }
 }
 

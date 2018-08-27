@@ -9,13 +9,14 @@
 import Foundation
 
 public func convertMovieResponseToEntity(response: MovieResponse) -> Movie {
-    
+                    
     return Movie(id: defaultIntIfNil(response.id),
                  title: defaultStringIfNil(response.title),
                  originalTitle: defaultStringIfNil(response.originalTitle),
                  voteAverage: defaultFloatIfNil(response.voteAverage),
                  posterPath: defaultStringIfNil(response.posterPath),
-                 releaseDate: defaultStringIfNil(response.releaseDate))
+                 releaseDate: defaultStringIfNil(response.releaseDate),
+                 genreIds: defaultArrayInt(response.genreIds))
 }
 
 public func convertMoviesResponsesToEntities(responses: [MovieResponse]) -> [Movie] {
@@ -62,3 +63,5 @@ public func convertMovieDetailResponseToEntity(response: MovieDetailResponse) ->
                        runtime: runtime,
                        releaseDate: releaseDate)
 }
+
+
