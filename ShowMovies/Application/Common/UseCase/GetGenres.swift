@@ -27,4 +27,14 @@ public class GetGenres {
     func findGenreNameBy(id: Int) -> String {
         return repository.findGenreNameBy(id: id)
     }
+    
+    func findGenresNameBy(ids: [Int]) -> String {
+        var genreTitles = [String]()
+        
+        ids.forEach { (id) in
+            genreTitles.append(repository.findGenreNameBy(id: id))
+        }
+        
+        return genreTitles.joined(separator: ", ")
+    }
 }

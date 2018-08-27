@@ -20,12 +20,11 @@ class MovieCell: UITableViewCell {
     
     public weak var delegate: MovieCellDelegate?
     
-    func configureView(movie: Movie) {        
-        let imageUrl         = RemoteUtils.buildImageUrl(path: movie.posterPath)
-        movieTitleLabel.text = movie.title
-        movieDateLabel.text  = movie.releaseDate
-        //        TODO: Create new contract for cell to request genres by ID and display here
-//        movieGenresLabel.text        
+    func configureView(movie: Movie, genreTitle: String) {
+        let imageUrl          = RemoteUtils.buildImageUrl(path: movie.posterPath)
+        movieTitleLabel.text  = movie.title
+        movieDateLabel.text   = movie.releaseDate
+        movieGenresLabel.text = genreTitle
         movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
     }
 }

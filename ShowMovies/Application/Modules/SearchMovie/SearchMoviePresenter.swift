@@ -10,32 +10,40 @@ import Foundation
 
 class SearchMoviePresenter: SearchMoviePresenterContract {
     
-    private weak var view: SearchMovieViewContract?
+    private unowned var view: SearchMovieViewContract
     private let getMovie: GetMovies
+    private let getGenre: GetGenres
     
-    init(view: SearchMovieViewContract, getMovie: GetMovies) {
+    init(view: SearchMovieViewContract,
+         getMovie: GetMovies,
+         getGenre: GetGenres) {
         self.view     = view
         self.getMovie = getMovie
+        self.getGenre = getGenre
     }
     
     func findMovie(page: Int, query: String) {
-        view?.showLoader()
+        view.showLoader()
         getMovie.searchMovieBy(query: query, page: page) { (useCaseCallback) in
             useCaseCallback.onSuccess { [unowned self] baseMovie in
-                self.view?.hideLoader()
-                self.view?.show(baseMovie: baseMovie)
+                self.view.hideLoader()
+                self.view.show(baseMovie: baseMovie)
             }
             
             useCaseCallback.onEmptyData { [unowned self] in
-                self.view?.hideLoader()
-                self.view?.emptyList()
+                self.view.hideLoader()
+                self.view.emptyList()
             }
             
             useCaseCallback.onFailed{ [unowned self] error in
-                self.view?.hideLoader()
-                self.view?.onError()
+                self.view.hideLoader()
+                self.view.onError()
             }
         }
+    }
+    
+    func getGenreTitlesBy(ids: [Int]) -> String {
+        return getGenre.findGenresNameBy(ids: ids)
     }
 }
 

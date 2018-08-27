@@ -18,5 +18,6 @@ protocol SearchMovieViewContract: class {
 
 protocol SearchMoviePresenterContract {
     func findMovie(page: Int, query: String)
+    func getGenreTitlesBy(ids: [Int]) -> String
 }
 

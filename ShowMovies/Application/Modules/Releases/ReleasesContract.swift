@@ -18,5 +18,7 @@ protocol ReleasesViewContract: class {
 
 protocol ReleasesPresenterContract {
     func loadReleases(page: Int)
+    func loadAndSaveGenres()
+    func getGenreTitlesBy(ids: [Int]) -> String
 }
 

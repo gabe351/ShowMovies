@@ -30,16 +30,21 @@ public class GenreApiDataSourceImpl: GenreApiDataSource {
         let parameters = buildGenreParams()
         let path       = "genre/movie/list"
         
-        Alamofire.request(RemoteUtils.buildUrl(path: path), method: .get, parameters: parameters).responseArray { (response: DataResponse<[GenreResponse]>) in
+        Alamofire.request(RemoteUtils.buildUrl(path: path), method: .get, parameters: parameters).responseObject { (response: DataResponse<BaseGenresResponse>) in
             switch(response.result) {
             case .success(let response):
                 
-                if response.isEmpty {
+                guard let genres = response.genres else {
                     loadCallback(BaseCallback.emptyData())
                     return
                 }
                 
-                loadCallback(BaseCallback.success(convertGenresResponsesToEntities(responses: response)))
+                if genres.isEmpty {
+                    loadCallback(BaseCallback.emptyData())
+                    return
+                }
+                
+                loadCallback(BaseCallback.success(convertGenresResponsesToEntities(responses: genres)))
                 
                 break
                 

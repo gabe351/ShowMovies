@@ -19,7 +19,8 @@ class ReleasesViewController: UIViewController {
     
     lazy var presenter: ReleasesPresenterContract = {
         return ReleasesPresenter(view: self,
-                                 getMovie: provideGetMovies())
+                                 getMovie: provideGetMovies(),
+                                 getGenres: provideGetGenres())
     }()
     
     
@@ -31,10 +32,11 @@ class ReleasesViewController: UIViewController {
         moviesTableView.lastPage    = lastPage
         
         hideKeyboardWhenTappedAround()
+        presenter.loadAndSaveGenres()
         presenter.loadReleases(page: currentPage)
         self.tabBarController?.tabBar.tintColor = UIColor.white        
     }
-    
+            
     private func buildAlertWith(title: String, message: String, actionTitle: String, _ actionClosure: @escaping () -> ()) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action) in
@@ -69,6 +71,7 @@ extension ReleasesViewController: ReleasesViewContract {
         let message = "Sorry, we had some error to load movies click 'Reload' to try again"
         let actionTitle = "Reload"
         let alert = buildAlertWith(title: title, message: message, actionTitle: actionTitle) { [unowned self] in
+            self.presenter.loadAndSaveGenres()
             self.presenter.loadReleases(page: self.currentPage)
         }
         
@@ -94,5 +97,9 @@ extension ReleasesViewController: MoviesTableViewContract {
         let movieDetail: MovieDetailViewController = loadNibNamed(MovieDetailViewController.NIB_NAME, owner: self)!
         movieDetail.movieId = id
         self.navigationController?.pushViewController(movieDetail, animated: true)
+    }
+    
+    func getGenreTitlesBy(ids: [Int]) -> String {
+        return presenter.getGenreTitlesBy(ids: ids)
     }
 }

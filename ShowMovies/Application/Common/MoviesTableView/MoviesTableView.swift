@@ -40,9 +40,14 @@ class MoviesTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
         
         let cell = self.dequeueReusableCell(withIdentifier: MovieCell.IDENTIFIER, for: indexPath as IndexPath) as! MovieCell
         
-        let movie = movies[indexPath.row]
+        let movie      = movies[indexPath.row]
+        var genreTitle = ""
         
-        cell.configureView(movie: movie)
+        if let foundGenres = contract?.getGenreTitlesBy(ids: movie.genreIds) {
+           genreTitle = foundGenres
+        }
+                
+        cell.configureView(movie: movie, genreTitle: genreTitle)
         
         return cell
     }

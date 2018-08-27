@@ -11,4 +11,5 @@ import Foundation
 protocol MoviesTableViewContract: class {
     func request(nextPage: Int)
     func goToDetail(id: Int)
+    func getGenreTitlesBy(ids: [Int]) -> String
 }

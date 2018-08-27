@@ -22,7 +22,8 @@ class SearchMovieViewController: UIViewController, UISearchBarDelegate {
     
     lazy var presenter: SearchMoviePresenterContract = {
         return SearchMoviePresenter(view: self,
-                                    getMovie: provideGetMovies())
+                                    getMovie: provideGetMovies(),
+                                    getGenre: provideGetGenres())
     }()
     
     override func viewDidLoad() {
@@ -108,5 +109,9 @@ extension SearchMovieViewController: MoviesTableViewContract {
         let movieDetail: MovieDetailViewController = loadNibNamed(MovieDetailViewController.NIB_NAME, owner: self)!
         movieDetail.movieId = id
         self.navigationController?.pushViewController(movieDetail, animated: true)
+    }
+    
+    func getGenreTitlesBy(ids: [Int]) -> String {
+        return presenter.getGenreTitlesBy(ids: ids)
     }
 }

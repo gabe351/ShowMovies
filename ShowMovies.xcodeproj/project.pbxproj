@@ -52,6 +52,7 @@
 		04AEEBA0213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB9F213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift */; };
 		04AEEBA221339A0100B90FC0 /* GetGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEBA121339A0100B90FC0 /* GetGenres.swift */; };
 		04AEEBA421339A8900B90FC0 /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEBA321339A8900B90FC0 /* InjectionLocalDataSource.swift */; };
+		04AEEBA621339DFC00B90FC0 /* BaseGenresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEBA521339DFC00B90FC0 /* BaseGenresResponse.swift */; };
 		04B2FC5F212A02A900D11769 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC5E212A02A900D11769 /* MovieRepository.swift */; };
 		04B2FC61212A03F100D11769 /* MovieRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC60212A03F100D11769 /* MovieRepositoryImpl.swift */; };
 		04B2FC65212A087C00D11769 /* MovieApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC64212A087C00D11769 /* MovieApiDataSource.swift */; };
@@ -147,6 +148,7 @@
 		04AEEB9F213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		04AEEBA121339A0100B90FC0 /* GetGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenres.swift; sourceTree = "<group>"; };
 		04AEEBA321339A8900B90FC0 /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
+		04AEEBA521339DFC00B90FC0 /* BaseGenresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGenresResponse.swift; sourceTree = "<group>"; };
 		04B2FC5E212A02A900D11769 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		04B2FC60212A03F100D11769 /* MovieRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryImpl.swift; sourceTree = "<group>"; };
 		04B2FC64212A087C00D11769 /* MovieApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSource.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 		04B2FC68212A08D600D11769 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				04AEEBA521339DFC00B90FC0 /* BaseGenresResponse.swift */,
 				04B2FC69212A08E800D11769 /* BaseMovieResponse.swift */,
 				04B2FC6B212A090800D11769 /* MovieResponse.swift */,
 				04B2FC6D212A092100D11769 /* MovieDetailResponse.swift */,
@@ -917,6 +920,7 @@
 				04B2FC6C212A090800D11769 /* MovieResponse.swift in Sources */,
 				04AEEB932133911400B90FC0 /* GenreRemoteDataSource.swift in Sources */,
 				049CCABE2128BDF700BB4C39 /* ViewUtils.swift in Sources */,
+				04AEEBA621339DFC00B90FC0 /* BaseGenresResponse.swift in Sources */,
 				04B2FC67212A089C00D11769 /* MovieApiDataSourceImpl.swift in Sources */,
 				04B2FC61212A03F100D11769 /* MovieRepositoryImpl.swift in Sources */,
 				04C0F221212D028300DF5DAA /* BaseMovieConverter.swift in Sources */,
