@@ -83,6 +83,11 @@
 		04C19ADA2131F35B0052EB4D /* SearchMovieByActionTestMovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19AD92131F35B0052EB4D /* SearchMovieByActionTestMovieRemoteDataSource.swift */; };
 		04C19ADC2131F54E0052EB4D /* AllReleasesByActionTestRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19ADB2131F54E0052EB4D /* AllReleasesByActionTestRemoteDataSource.swift */; };
 		04C19ADE2131F6300052EB4D /* MovieDetailActionTestMovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19ADD2131F6300052EB4D /* MovieDetailActionTestMovieRemoteDataSource.swift */; };
+		04DA47EC2134A67600575734 /* AllGenresByActionTestGenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA47EB2134A67600575734 /* AllGenresByActionTestGenreRepository.swift */; };
+		04DA47EF2134A6C400575734 /* GenreRemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA47EE2134A6C400575734 /* GenreRemoteDataSourceMock.swift */; };
+		04DA47F12134A6CE00575734 /* GenreLocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA47F02134A6CE00575734 /* GenreLocalDataSourceMock.swift */; };
+		04DA47F32134AD8800575734 /* SaveActionTestGenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA47F22134AD8800575734 /* SaveActionTestGenreRepository.swift */; };
+		04DA47F52134AE6D00575734 /* FindGenreNameByActionTestGenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA47F42134AE6D00575734 /* FindGenreNameByActionTestGenreRepository.swift */; };
 		04DA63A0212F966E00C04243 /* SearchMovieByActionTestMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA639F212F966E00C04243 /* SearchMovieByActionTestMovieRepository.swift */; };
 		04DA63A5212F979F00C04243 /* DoubleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA63A4212F979F00C04243 /* DoubleUtils.swift */; };
 		04DA63A7212F97EF00C04243 /* MovieRemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA63A6212F97EF00C04243 /* MovieRemoteDataSourceMock.swift */; };
@@ -188,6 +193,11 @@
 		04C19AD92131F35B0052EB4D /* SearchMovieByActionTestMovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieByActionTestMovieRemoteDataSource.swift; sourceTree = "<group>"; };
 		04C19ADB2131F54E0052EB4D /* AllReleasesByActionTestRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReleasesByActionTestRemoteDataSource.swift; sourceTree = "<group>"; };
 		04C19ADD2131F6300052EB4D /* MovieDetailActionTestMovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailActionTestMovieRemoteDataSource.swift; sourceTree = "<group>"; };
+		04DA47EB2134A67600575734 /* AllGenresByActionTestGenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGenresByActionTestGenreRepository.swift; sourceTree = "<group>"; };
+		04DA47EE2134A6C400575734 /* GenreRemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRemoteDataSourceMock.swift; sourceTree = "<group>"; };
+		04DA47F02134A6CE00575734 /* GenreLocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreLocalDataSourceMock.swift; sourceTree = "<group>"; };
+		04DA47F22134AD8800575734 /* SaveActionTestGenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveActionTestGenreRepository.swift; sourceTree = "<group>"; };
+		04DA47F42134AE6D00575734 /* FindGenreNameByActionTestGenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGenreNameByActionTestGenreRepository.swift; sourceTree = "<group>"; };
 		04DA639F212F966E00C04243 /* SearchMovieByActionTestMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieByActionTestMovieRepository.swift; sourceTree = "<group>"; };
 		04DA63A4212F979F00C04243 /* DoubleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleUtils.swift; sourceTree = "<group>"; };
 		04DA63A6212F97EF00C04243 /* MovieRemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRemoteDataSourceMock.swift; sourceTree = "<group>"; };
@@ -627,6 +637,26 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		04DA47EA2134A5E700575734 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				04DA47ED2134A6B700575734 /* Mock */,
+				04DA47EB2134A67600575734 /* AllGenresByActionTestGenreRepository.swift */,
+				04DA47F22134AD8800575734 /* SaveActionTestGenreRepository.swift */,
+				04DA47F42134AE6D00575734 /* FindGenreNameByActionTestGenreRepository.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
+		04DA47ED2134A6B700575734 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				04DA47EE2134A6C400575734 /* GenreRemoteDataSourceMock.swift */,
+				04DA47F02134A6CE00575734 /* GenreLocalDataSourceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		04DA639C212F962C00C04243 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +670,7 @@
 		04DA639D212F964300C04243 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				04DA47EA2134A5E700575734 /* Genre */,
 				04DA639E212F964F00C04243 /* Movie */,
 			);
 			path = Repository;
@@ -1007,6 +1038,7 @@
 			files = (
 				04F1FEC42134033600DEF646 /* SaveGenreActionTestGenreLocalDataSource.swift in Sources */,
 				04C19ADC2131F54E0052EB4D /* AllReleasesByActionTestRemoteDataSource.swift in Sources */,
+				04DA47F32134AD8800575734 /* SaveActionTestGenreRepository.swift in Sources */,
 				04F1FEC82134097700DEF646 /* FindGenreNameByActionTestGenreLocalDataSource.swift in Sources */,
 				04DA63A5212F979F00C04243 /* DoubleUtils.swift in Sources */,
 				04F1FEC0213401BB00DEF646 /* AllGenresActionTestGenreRemoteDataSource.swift in Sources */,
@@ -1019,10 +1051,14 @@
 				04F1FEBE2134012400DEF646 /* GenreApiDataSourceMock.swift in Sources */,
 				049CCA8B212844D200BB4C39 /* DefaultFloatIfNilActionTest.swift in Sources */,
 				04B8A01B21283C2C00D7CA77 /* ShowMoviesTests.swift in Sources */,
+				04DA47EC2134A67600575734 /* AllGenresByActionTestGenreRepository.swift in Sources */,
 				049CCA822128435500BB4C39 /* DefaultStringIfNilActionTest.swift in Sources */,
+				04DA47EF2134A6C400575734 /* GenreRemoteDataSourceMock.swift in Sources */,
 				049CCA852128446B00BB4C39 /* BuildURLWithPathActionTest.swift in Sources */,
+				04DA47F12134A6CE00575734 /* GenreLocalDataSourceMock.swift in Sources */,
 				049CCA89212844B300BB4C39 /* DefaultDateIfNilActionTest.swift in Sources */,
 				04DA63A7212F97EF00C04243 /* MovieRemoteDataSourceMock.swift in Sources */,
+				04DA47F52134AE6D00575734 /* FindGenreNameByActionTestGenreRepository.swift in Sources */,
 				04C19ADA2131F35B0052EB4D /* SearchMovieByActionTestMovieRemoteDataSource.swift in Sources */,
 				049CCA8D212844FB00BB4C39 /* DefaultIntIfNilActionTest.swift in Sources */,
 				04DA63A0212F966E00C04243 /* SearchMovieByActionTestMovieRepository.swift in Sources */,
