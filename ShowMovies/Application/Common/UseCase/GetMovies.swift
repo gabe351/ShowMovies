@@ -10,22 +10,22 @@ import Foundation
 
 public class GetMovies {
     
-    private weak var repository: MovieRepository?
+    private unowned var repository: MovieRepository
 
     init(repository: MovieRepository) {
         self.repository = repository
     }
     
     public func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
-        repository?.allReleasesBy(page: page, loadCallback)
+        repository.allReleasesBy(page: page, loadCallback)
     }
 
     public func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
-        repository?.searchMovieBy(query: query, page: page, loadCallback)
+        repository.searchMovieBy(query: query, page: page, loadCallback)
     }
 
     public func movieDetail(id: Int, _ loadCallback: @escaping (BaseCallback<MovieDetail>) -> Void) {
-        repository?.movieDetail(id: id, loadCallback)
+        repository.movieDetail(id: id, loadCallback)
     }
 }
 

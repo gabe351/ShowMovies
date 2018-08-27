@@ -12,3 +12,8 @@ public func provideGetMovies() -> GetMovies {
     let repository = provideMovieRepository()
     return GetMovies(repository: repository)
 }
+
+public func provideGetGenres() -> GetGenres {
+    let repository = provideGenreRepository()
+    return GetGenres(repository: repository)
+}

@@ -12,3 +12,8 @@ public func provideMovieRemoteDataSource() -> MovieRemoteDataSource {
     let apiDataSource = provieMovieApiDataSource()
     return MovieRemoteDataSourceImpl.getInstance(apiDataSource: apiDataSource)
 }
+
+public func provideGenreRemoteDataSource() -> GenreRemoteDataSource {
+    let apiDataSource = provideGenreApiDataSource()
+    return GenreRemoteDataSourceImpl.getInstance(apiDataSource: apiDataSource)
+}

@@ -11,3 +11,7 @@ import Foundation
 public func provieMovieApiDataSource() -> MovieApiDataSource {
     return MovieApiDataSourceImpl.getInstance()
 }
+
+public func provideGenreApiDataSource() -> GenreApiDataSource {
+    return GenreApiDataSourceImpl.getInstance()
+}

@@ -42,6 +42,16 @@
 		049CCABE2128BDF700BB4C39 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCABD2128BDF700BB4C39 /* ViewUtils.swift */; };
 		049CCAC02128C3EF00BB4C39 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CCABF2128C3EF00BB4C39 /* MoviesTableView.swift */; };
 		04AEEB8C213388C700B90FC0 /* MovieCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB8B213388C700B90FC0 /* MovieCellDelegate.swift */; };
+		04AEEB8F21338E9100B90FC0 /* GenreApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB8E21338E9100B90FC0 /* GenreApiDataSource.swift */; };
+		04AEEB9121338F3200B90FC0 /* GenreApiDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB9021338F3200B90FC0 /* GenreApiDataSourceImpl.swift */; };
+		04AEEB932133911400B90FC0 /* GenreRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB922133911400B90FC0 /* GenreRemoteDataSource.swift */; };
+		04AEEB952133916800B90FC0 /* GenreRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB942133916800B90FC0 /* GenreRemoteDataSourceImpl.swift */; };
+		04AEEB98213391C700B90FC0 /* GenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB97213391C700B90FC0 /* GenreRepository.swift */; };
+		04AEEB9A213391DE00B90FC0 /* GenreRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB99213391DE00B90FC0 /* GenreRepositoryImpl.swift */; };
+		04AEEB9E213397C000B90FC0 /* GenreLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB9D213397C000B90FC0 /* GenreLocalDataSource.swift */; };
+		04AEEBA0213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEB9F213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift */; };
+		04AEEBA221339A0100B90FC0 /* GetGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEBA121339A0100B90FC0 /* GetGenres.swift */; };
+		04AEEBA421339A8900B90FC0 /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEEBA321339A8900B90FC0 /* InjectionLocalDataSource.swift */; };
 		04B2FC5F212A02A900D11769 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC5E212A02A900D11769 /* MovieRepository.swift */; };
 		04B2FC61212A03F100D11769 /* MovieRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC60212A03F100D11769 /* MovieRepositoryImpl.swift */; };
 		04B2FC65212A087C00D11769 /* MovieApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2FC64212A087C00D11769 /* MovieApiDataSource.swift */; };
@@ -127,6 +137,16 @@
 		049CCABD2128BDF700BB4C39 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		049CCABF2128C3EF00BB4C39 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
 		04AEEB8B213388C700B90FC0 /* MovieCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellDelegate.swift; sourceTree = "<group>"; };
+		04AEEB8E21338E9100B90FC0 /* GenreApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreApiDataSource.swift; sourceTree = "<group>"; };
+		04AEEB9021338F3200B90FC0 /* GenreApiDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreApiDataSourceImpl.swift; sourceTree = "<group>"; };
+		04AEEB922133911400B90FC0 /* GenreRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRemoteDataSource.swift; sourceTree = "<group>"; };
+		04AEEB942133916800B90FC0 /* GenreRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		04AEEB97213391C700B90FC0 /* GenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepository.swift; sourceTree = "<group>"; };
+		04AEEB99213391DE00B90FC0 /* GenreRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepositoryImpl.swift; sourceTree = "<group>"; };
+		04AEEB9D213397C000B90FC0 /* GenreLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreLocalDataSource.swift; sourceTree = "<group>"; };
+		04AEEB9F213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		04AEEBA121339A0100B90FC0 /* GetGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenres.swift; sourceTree = "<group>"; };
+		04AEEBA321339A8900B90FC0 /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
 		04B2FC5E212A02A900D11769 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		04B2FC60212A03F100D11769 /* MovieRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryImpl.swift; sourceTree = "<group>"; };
 		04B2FC64212A087C00D11769 /* MovieApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSource.swift; sourceTree = "<group>"; };
@@ -220,6 +240,7 @@
 			children = (
 				04B2FC5B212A027D00D11769 /* Repository */,
 				04B2FC5D212A028E00D11769 /* Remote */,
+				04AEEB9B213397A600B90FC0 /* Local */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -399,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				049CCAB22128BBB400BB4C39 /* GetMovies.swift */,
+				04AEEBA121339A0100B90FC0 /* GetGenres.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -411,9 +433,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04AEEB8D21338D8700B90FC0 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				04AEEB8E21338E9100B90FC0 /* GenreApiDataSource.swift */,
+				04AEEB9021338F3200B90FC0 /* GenreApiDataSourceImpl.swift */,
+				04AEEB922133911400B90FC0 /* GenreRemoteDataSource.swift */,
+				04AEEB942133916800B90FC0 /* GenreRemoteDataSourceImpl.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
+		04AEEB96213391C000B90FC0 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				04AEEB97213391C700B90FC0 /* GenreRepository.swift */,
+				04AEEB99213391DE00B90FC0 /* GenreRepositoryImpl.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
+		04AEEB9B213397A600B90FC0 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				04AEEB9C213397B600B90FC0 /* Genre */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		04AEEB9C213397B600B90FC0 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				04AEEB9D213397C000B90FC0 /* GenreLocalDataSource.swift */,
+				04AEEB9F213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
 		04B2FC5B212A027D00D11769 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				04AEEB96213391C000B90FC0 /* Genre */,
 				04B2FC63212A086B00D11769 /* Movie */,
 			);
 			path = Repository;
@@ -422,6 +482,7 @@
 		04B2FC5D212A028E00D11769 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				04AEEB8D21338D8700B90FC0 /* Genre */,
 				04B2FC62212A086600D11769 /* Movie */,
 			);
 			path = Remote;
@@ -474,6 +535,7 @@
 				04B2FC81212A0D2400D11769 /* InjectionUseCase.swift */,
 				04B2FC7F212A0D1B00D11769 /* InjectionRepository.swift */,
 				04B2FC7D212A0CCD00D11769 /* InjectionRemoteDataSource.swift */,
+				04AEEBA321339A8900B90FC0 /* InjectionLocalDataSource.swift */,
 				04B2FC7B212A0C7900D11769 /* InjectionApiDataSource.swift */,
 			);
 			path = Injections;
@@ -829,15 +891,22 @@
 				049CCAB52128BBFF00BB4C39 /* MovieDetailPresenter.swift in Sources */,
 				049CCA71212841B000BB4C39 /* UIActivityIndicatorView.swift in Sources */,
 				04B2FC84212A0D8B00D11769 /* ReleasesPresenter.swift in Sources */,
+				04AEEB9121338F3200B90FC0 /* GenreApiDataSourceImpl.swift in Sources */,
 				041AB4962132C91500844FD1 /* UITableViewExtension.swift in Sources */,
+				04AEEB9A213391DE00B90FC0 /* GenreRepositoryImpl.swift in Sources */,
 				04B2FC86212A11FF00D11769 /* SearchMoviePresenter.swift in Sources */,
 				04B2FC6E212A092100D11769 /* MovieDetailResponse.swift in Sources */,
+				04AEEB98213391C700B90FC0 /* GenreRepository.swift in Sources */,
 				04B2FC80212A0D1B00D11769 /* InjectionRepository.swift in Sources */,
+				04AEEB8F21338E9100B90FC0 /* GenreApiDataSource.swift in Sources */,
 				049CCAAC2128BB0C00BB4C39 /* MovieDetailContract.swift in Sources */,
 				049CCA6F2128404900BB4C39 /* StringExtension.swift in Sources */,
 				04B2FC5F212A02A900D11769 /* MovieRepository.swift in Sources */,
 				04B2FC79212A0B0000D11769 /* MovieRemoteDataSourceImpl.swift in Sources */,
+				04AEEBA0213397EE00B90FC0 /* GenreLocalDataSourceImpl.swift in Sources */,
+				04AEEBA221339A0100B90FC0 /* GetGenres.swift in Sources */,
 				049CCAB02128BB4800BB4C39 /* Genre.swift in Sources */,
+				04AEEBA421339A8900B90FC0 /* InjectionLocalDataSource.swift in Sources */,
 				049CCAB92128BCFB00BB4C39 /* LoaderViewController.swift in Sources */,
 				049CCAA921285A9900BB4C39 /* ReleasesContract.swift in Sources */,
 				049CCAA4212852DF00BB4C39 /* SearchMovieContract.swift in Sources */,
@@ -846,16 +915,19 @@
 				04B2FC82212A0D2400D11769 /* InjectionUseCase.swift in Sources */,
 				049CCA7C212842C100BB4C39 /* RemoteUtils.swift in Sources */,
 				04B2FC6C212A090800D11769 /* MovieResponse.swift in Sources */,
+				04AEEB932133911400B90FC0 /* GenreRemoteDataSource.swift in Sources */,
 				049CCABE2128BDF700BB4C39 /* ViewUtils.swift in Sources */,
 				04B2FC67212A089C00D11769 /* MovieApiDataSourceImpl.swift in Sources */,
 				04B2FC61212A03F100D11769 /* MovieRepositoryImpl.swift in Sources */,
 				04C0F221212D028300DF5DAA /* BaseMovieConverter.swift in Sources */,
+				04AEEB952133916800B90FC0 /* GenreRemoteDataSourceImpl.swift in Sources */,
 				049CCAA02128505800BB4C39 /* Movie.swift in Sources */,
 				04C0F21F212CF20900DF5DAA /* BaseMovie.swift in Sources */,
 				04B8A00821283C2A00D7CA77 /* ViewController.swift in Sources */,
 				04AEEB8C213388C700B90FC0 /* MovieCellDelegate.swift in Sources */,
 				04B8A00621283C2A00D7CA77 /* AppDelegate.swift in Sources */,
 				049CCAB32128BBB400BB4C39 /* GetMovies.swift in Sources */,
+				04AEEB9E213397C000B90FC0 /* GenreLocalDataSource.swift in Sources */,
 				049CCA9921284FCE00BB4C39 /* MovieCell.swift in Sources */,
 				04B2FC7C212A0C7900D11769 /* InjectionApiDataSource.swift in Sources */,
 				04B2FC70212A093400D11769 /* GenreResponse.swift in Sources */,

@@ -6,8 +6,8 @@
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MovieCellDelegate: class {
-    func requestMainGenreBy(id: Int) -> Void
+    func requestMainGenreBy(id: Int, label: UILabel) -> Void
 }

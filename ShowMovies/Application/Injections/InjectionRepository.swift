@@ -12,3 +12,10 @@ public func provideMovieRepository() -> MovieRepository {
     let remoteDataSource = provideMovieRemoteDataSource()
     return MovieRepositoryImpl.getInstance(remoteDataSource: remoteDataSource)
 }
+
+public func provideGenreRepository() -> GenreRepository {
+    let localDataSource  = provideGenreLocalDataSource()
+    let remoteDataSource = provideGenreRemoteDataSource()
+    return GenreRepositoryImpl.getInstance(remoteDataSource: remoteDataSource,
+                                           localDataSource: localDataSource)
+}

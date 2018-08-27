@@ -25,7 +25,7 @@ class MovieCell: UITableViewCell {
         movieTitleLabel.text = movie.title
         movieDateLabel.text  = movie.releaseDate
         //        TODO: Create new contract for cell to request genres by ID and display here
-//        movieGenresLabel.text
+//        movieGenresLabel.text        
         movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
     }
 }
