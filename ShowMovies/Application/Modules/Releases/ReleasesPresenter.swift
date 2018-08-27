@@ -47,10 +47,6 @@ class ReleasesPresenter: ReleasesPresenterContract {
                     self.getGenres.save(genre: $0)
                 }
             }
-            
-            genresCallback.onEmptyData {}
-            
-            genresCallback.onFailed() { (_) in}
         }
     }
     

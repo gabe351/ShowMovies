@@ -14,7 +14,6 @@ class MovieApiDataSourceMock: MovieApiDataSource, DoubleBlockWithNoReturnProtoco
     var doubleParameters: DoubleParameters?
     var doubleBlockWithNoReturn: DoubleBlockWithNoReturn?
     
-    
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<BaseMovie>) -> Void) {
         
         let action     = "searchMovieBy"
