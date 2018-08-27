@@ -12,11 +12,15 @@ What you need to run this project:
 * Xcode 9.2
 * [CocoaPods - Installation Guide](https://guides.cocoapods.org/using/getting-started.html)
 
-### Installing
+### Installing instructions
 
-1 - Run 'pod install' from the project source directory.
-
-2 - Open the .xcworkspace file.
+```bash
+sudo gem install cocoapods
+git clone https://github.com/gabe351/ShowMovies.git
+cd ShowMovies
+pod install
+open ShowMovies.xcworkspace
+```
 
 ## Running instructions
 
@@ -31,6 +35,13 @@ CMD + U to run tests.
 * [SDWebImage](https://github.com/rs/SDWebImage) -> Asynchronous image downloader with cache support as a UIImageView category.
 * [Quick](https://github.com/Quick/Quick) -> Behavior-driven development framework for Swift and Objective-C.
 * [Nimble](https://github.com/Quick/Nimble) -> A Matcher Framework for Swift and Objective-C.
+
+## Next updates
+
+- Add RX Swift to optimize requests
+- Add multiple language support
+- Add notifications to new releases
+- Add save favorite movies locally
 
 ## Gallery
 
