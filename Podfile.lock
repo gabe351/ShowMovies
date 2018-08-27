@@ -9,7 +9,6 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
-  - SwiftyJSON (4.0.0)
   - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
@@ -18,7 +17,6 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SDWebImage
-  - SwiftyJSON
   - UIColor_Hex_Swift (~> 4.0.1)
 
 SPEC CHECKSUMS:
@@ -28,9 +26,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: d18dc8b5b768eaa8acb8b24805819187bbfd75ed
+PODFILE CHECKSUM: 0a2c6872451e88e4846b374279a52389e843e708
 
 COCOAPODS: 1.2.0
