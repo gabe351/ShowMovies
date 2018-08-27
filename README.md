@@ -18,6 +18,7 @@ What you need to run this project:
 ## Running instructions
 
 CMD + R to run the project.
+
 CMD + U to run tests.
 
 ## Libraries used
