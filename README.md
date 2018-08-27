@@ -31,3 +31,17 @@ CMD + U to run tests.
 
 ## Gallery
 
+### New releases
+<p>
+<img src="https://github.com/gabe351/ShowMovies/blob/develop/screenshots/Screen%20Shot%202018-08-27%20at%2019.49.09.png" width="150">
+</p>
+### Search Movies
+<p>
+<img src="https://github.com/gabe351/ShowMovies/blob/develop/screenshots/Screen%20Shot%202018-08-27%20at%2019.49.39.png" width="150">
+</p>
+### Movie Detail
+<p>
+<img src="https://github.com/gabe351/ShowMovies/blob/develop/screenshots/Screen%20Shot%202018-08-27%20at%2019.50.12.png" width="150">
+</p>
+
+
