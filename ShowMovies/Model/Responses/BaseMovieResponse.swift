@@ -24,20 +24,11 @@ public class BaseMoviesResponse: NSObject, Mappable {
         self.init()
     }
     
-    public func mapping(map: Map) {
-        
-        page         <- map[APIField.page]
-        totalResults <- map[APIField.totalResults]
-        totalPages   <- map[APIField.totalPages]
-        results      <- map[APIField.results]
-    }
-    
-    private struct APIField {
-        
-        static let page         = "page"
-        static let totalResults = "total_results"
-        static let totalPages   = "total_pages"
-        static let results      = "results"
+    public func mapping(map: Map) {        
+        page         <- map[APIFieldEnum.page.rawValue]
+        totalResults <- map[APIFieldEnum.totalResults.rawValue]
+        totalPages   <- map[APIFieldEnum.totalPages.rawValue]
+        results      <- map[APIFieldEnum.results.rawValue]
     }
 }
 

@@ -29,24 +29,13 @@ public class MovieResponse: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        id            <- map[APIField.id]
-        title         <- map[APIField.title]
-        originalTitle <- map[APIField.originalTitle]
-        voteAverage   <- map[APIField.voteAverage]
-        posterPath    <- map[APIField.posterPath]
-        releaseDate   <- map[APIField.releaseDate]
-        genreIds      <- map[APIField.genreIds]
-    }
-    
-    private struct APIField {
-        
-        static let id            = "id"
-        static let title         = "title"
-        static let originalTitle = "original_title"
-        static let voteAverage   = "vote_average"
-        static let posterPath    = "poster_path"
-        static let releaseDate   = "release_date"
-        static let genreIds      = "genre_ids"
-    }
+        id            <- map[APIFieldEnum.id.rawValue]
+        title         <- map[APIFieldEnum.title.rawValue]
+        originalTitle <- map[APIFieldEnum.originalTitle.rawValue]
+        voteAverage   <- map[APIFieldEnum.voteAverage.rawValue]
+        posterPath    <- map[APIFieldEnum.posterPath.rawValue]
+        releaseDate   <- map[APIFieldEnum.releaseDate.rawValue]
+        genreIds      <- map[APIFieldEnum.genreIds.rawValue]
+    }        
 }
 

@@ -22,10 +22,6 @@ public class BaseGenresResponse: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        genres <- map[APIField.genres]
-    }
-    
-    private struct APIField {
-        static let genres = "genres"
+        genres <- map[APIFieldEnum.genres.rawValue]
     }
 }

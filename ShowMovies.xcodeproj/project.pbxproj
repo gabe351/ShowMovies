@@ -100,6 +100,7 @@
 		04F1FEC82134097700DEF646 /* FindGenreNameByActionTestGenreLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1FEC72134097700DEF646 /* FindGenreNameByActionTestGenreLocalDataSource.swift */; };
 		A7DDD15B3DC53A161BBDFB42 /* Pods_ShowMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55195AC78746F12D13506DC7 /* Pods_ShowMovies.framework */; };
 		B13884138C0440AD4E166B50 /* Pods_ShowMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF6098DE75EA08CB8C38124 /* Pods_ShowMoviesTests.framework */; };
+		E7656C872146BA130047E716 /* APIFieldEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7656C862146BA130047E716 /* APIFieldEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		7E9E78A9E2AF0CE83F02850F /* Pods-ShowMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMoviesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9946686EEB2748FA6BBE3D19 /* Pods-ShowMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA0D2607BF322D248DA253D9 /* Pods-ShowMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMovies/Pods-ShowMovies.release.xcconfig"; sourceTree = "<group>"; };
+		E7656C862146BA130047E716 /* APIFieldEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFieldEnum.swift; sourceTree = "<group>"; };
 		FE7B3C58761632447C83D397 /* Pods-ShowMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowMovies/Pods-ShowMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF6098DE75EA08CB8C38124 /* Pods_ShowMoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShowMoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -533,6 +535,7 @@
 		04B2FC68212A08D600D11769 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				E7656C862146BA130047E716 /* APIFieldEnum.swift */,
 				04AEEBA521339DFC00B90FC0 /* BaseGenresResponse.swift */,
 				04B2FC69212A08E800D11769 /* BaseMovieResponse.swift */,
 				04B2FC6B212A090800D11769 /* MovieResponse.swift */,
@@ -779,7 +782,6 @@
 				04B89FFF21283C2A00D7CA77 /* Frameworks */,
 				04B8A00021283C2A00D7CA77 /* Resources */,
 				E0157EB1D372BAD1D9A1EDB6 /* [CP] Embed Pods Frameworks */,
-				76B635374A6F137226EAEABA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -799,7 +801,6 @@
 				04B8A01321283C2C00D7CA77 /* Frameworks */,
 				04B8A01421283C2C00D7CA77 /* Resources */,
 				FD35E6167B5E4CCDE20F2383 /* [CP] Embed Pods Frameworks */,
-				2B46E2DF0E57378BD2A1BA40 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -872,49 +873,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B46E2DF0E57378BD2A1BA40 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4355DBAA74581E9D90DC71A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShowMovies-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		76B635374A6F137226EAEABA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShowMovies/Pods-ShowMovies-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5A52D3559758149AC3413DC /* [CP] Check Pods Manifest.lock */ = {
@@ -923,13 +897,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShowMoviesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0157EB1D372BAD1D9A1EDB6 /* [CP] Embed Pods Frameworks */ = {
@@ -938,9 +915,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShowMovies/Pods-ShowMovies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -953,9 +941,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShowMoviesTests/Pods-ShowMoviesTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1024,6 +1017,7 @@
 				049CCA752128421300BB4C39 /* UIViewControllerExtension.swift in Sources */,
 				049CCA73212841C900BB4C39 /* UIColorExtension.swift in Sources */,
 				04B2FC65212A087C00D11769 /* MovieApiDataSource.swift in Sources */,
+				E7656C872146BA130047E716 /* APIFieldEnum.swift in Sources */,
 				04B2FC7E212A0CCD00D11769 /* InjectionRemoteDataSource.swift in Sources */,
 				04B2FC6A212A08E800D11769 /* BaseMovieResponse.swift in Sources */,
 				049CCA7E2128430600BB4C39 /* DefaultValues.swift in Sources */,

@@ -23,14 +23,8 @@ public class GenreResponse: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        id   <- map[APIField.id]
-        name <- map[APIField.name]
-    }
-    
-    private struct APIField {
-        
-        static let id   = "id"
-        static let name = "name"
+        id   <- map[APIFieldEnum.id.rawValue]
+        name <- map[APIFieldEnum.name.rawValue]
     }
 }
 
