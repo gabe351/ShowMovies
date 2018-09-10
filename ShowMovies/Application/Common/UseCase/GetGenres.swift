@@ -10,29 +10,29 @@ import Foundation
 
 public class GetGenres {
     
-    private unowned var repository: GenreRepository
+    private weak var repository: GenreRepository?
     
     init(repository: GenreRepository) {
         self.repository = repository
     }
     
     func allGenres(_ loadCallback: @escaping (BaseCallback<[Genre]>) -> Void) {
-        repository.allGenres(loadCallback)
+        repository?.allGenres(loadCallback)
     }
     
     func save(genre: Genre) {
-        repository.save(genre: genre)
+        repository?.save(genre: genre)
     }
     
     func findGenreNameBy(id: Int) -> String {
-        return repository.findGenreNameBy(id: id)
+        return defaultStringIfNil(repository?.findGenreNameBy(id: id))
     }
     
     func findGenresNameBy(ids: [Int]) -> String {
         var genreTitles = [String]()
         
         ids.forEach { (id) in
-            genreTitles.append(repository.findGenreNameBy(id: id))
+            genreTitles.append(defaultStringIfNil(repository?.findGenreNameBy(id: id)))
         }
         
         return genreTitles.joined(separator: ", ")

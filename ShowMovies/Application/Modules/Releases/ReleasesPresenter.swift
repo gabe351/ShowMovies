@@ -42,9 +42,9 @@ class ReleasesPresenter: ReleasesPresenterContract {
     
     func loadAndSaveGenres() {
         getGenres.allGenres { (genresCallback) in
-            genresCallback.onSuccess() { (genres) in
+            genresCallback.onSuccess() { [weak self] genres in
                 genres.forEach() {
-                    self.getGenres.save(genre: $0)
+                    self?.getGenres.save(genre: $0)
                 }
             }
         }
