@@ -14,6 +14,7 @@ public class GetGenres {
     
     init(repository: GenreRepository) {
         self.repository = repository
+        
     }
     
     func allGenres(_ loadCallback: @escaping (BaseCallback<[Genre]>) -> Void) {
