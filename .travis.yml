@@ -4,7 +4,7 @@ before_script:
     - brew update
 
 script:
-   - xcodebuild clean build -sdk iphonesimulator -workspace ShowMovies.xcworkspace -scheme ShowMovie CODE_SIGNING_REQUIRED=NO
+   - xcodebuild clean build -sdk iphonesimulator -workspace ShowMovies.xcworkspace -scheme ShowMovies CODE_SIGNING_REQUIRED=NO
 
 branches:
   only:
