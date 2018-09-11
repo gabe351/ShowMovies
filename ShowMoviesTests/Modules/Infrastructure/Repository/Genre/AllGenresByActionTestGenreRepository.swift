@@ -28,7 +28,7 @@ class AllGenresByActionTestGenreRepository: QuickSpec {
         describe("#allGenres") {
             
             let action   = "allGenres"
-            let expected = ["Called fail"]
+            let expected = ["Called success"]
             
             context("When call all genres") {
                 
