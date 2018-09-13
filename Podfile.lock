@@ -19,6 +19,16 @@ DEPENDENCIES:
   - SDWebImage
   - UIColor_Hex_Swift (~> 4.0.1)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Nimble
+    - ObjectMapper
+    - Quick
+    - SDWebImage
+    - UIColor_Hex_Swift
+
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
@@ -30,4 +40,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0a2c6872451e88e4846b374279a52389e843e708
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3
