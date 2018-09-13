@@ -1,0 +1,14 @@
+enable_default_warnings!
+use_defaults_for_everything_not_specified_in_this_file!
+
+option "IPHONEOS_DEPLOYMENT_TARGET", "11.4"
+option "SDKROOT", "iphoneos"
+option "CLANG_ENABLE_OBJC_ARC", true
+option "CLANG_ENABLE_MODULES", true
+
+target "ShowMovies" do
+  scheme "ShowMovies" do
+    option "PRODUCT_NAME", "ShowMovies"
+    option "BUNDLE_DISPLAY_NAME_SUFFIX", "br.com.gabe.ShowMovies"
+  end
+end
