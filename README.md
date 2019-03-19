@@ -1,6 +1,6 @@
-# Code Challenge
+# Show movies
 
-This code is for a challenge proposed by ArcTouch.
+This is a simple app to search for movies using [TMDb api](https://www.themoviedb.org/)
 
 ![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat-square)
 
