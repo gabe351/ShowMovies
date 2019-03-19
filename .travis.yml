@@ -1,0 +1,12 @@
+language: objective-c
+
+before_script:
+    - brew update
+
+script:
+  - pod install
+  - xcodebuild -workspace ShowMovies.xcworkspace -scheme "ShowMovies" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.4' test
+
+branches:
+  only:
+    - master
